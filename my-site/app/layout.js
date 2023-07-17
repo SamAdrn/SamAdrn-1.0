@@ -1,16 +1,10 @@
 import "./globals.css";
-import { Inter, Geologica, Roboto_Mono } from "next/font/google";
+import { Open_Sans, Roboto_Mono } from "next/font/google";
 
-const inter = Inter({
+const open_sans = Open_Sans({
     subsets: ["latin"],
     display: "swap",
-    variable: "--font-inter",
-});
-
-const geologica = Geologica({
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-geologica",
+    variable: "--font-open-sans",
 });
 
 const roboto_mono = Roboto_Mono({
@@ -30,7 +24,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${inter.className} ${geologica.className} ${roboto_mono.variable} bg-slate-100`}
+                className={`${open_sans.className} ${roboto_mono.variable} bg-slate-100`}
             >
                 <script
                     src="https://kit.fontawesome.com/b079da69e8.js"

@@ -2,12 +2,13 @@ import React from "react";
 
 function Title() {
     return (
-        <h1 className="text-5xl font-medium font-mono">
-            Hey, I&apos;m Sam,
-            <br className="md:hidden" />
-            <br className="md:hidden" />
-            {" "} an Aspiring Software Engineer
-        </h1>
+        <div>
+            <h1 className="text-5xl md:text-7xl font-medium font-sans cursor-default">
+                Samuel{" "}
+                <br className="md:hidden" />
+                Kosasih
+            </h1>
+        </div>
     );
 }
 

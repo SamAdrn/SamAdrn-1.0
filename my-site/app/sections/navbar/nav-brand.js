@@ -9,7 +9,7 @@ function NavBrand() {
                 "transition-all duration-300"
             }
         >
-            <span className="self-center text-4xl font-semibold">
+            <span className="self-center text-4xl font-semibold font-mono">
                 Samuel K<span className="hidden md:inline">osasih</span>
                 <span className="md:hidden">.</span>
             </span>
