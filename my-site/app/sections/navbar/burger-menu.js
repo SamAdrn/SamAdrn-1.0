@@ -1,13 +1,13 @@
 import React from "react";
 
-function BurgerMenu({ onClick, colorChange }) {
+function BurgerMenu({ onClick, scrollAtTop }) {
     return (
         <button
             type="button"
             className={
                 "inline-flex items-center p-2 w-10 h-10 justify-center " +
                 "rounded-lg md:hidden " +
-                `${colorChange ? "fill-black" : "fill-white drop-shadow-md"}`
+                `${scrollAtTop ? "fill-black" : "fill-white drop-shadow-md"}`
             }
             onClick={onClick}
         >

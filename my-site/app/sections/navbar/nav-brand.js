@@ -1,20 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function NavBrand({ colorChange }) {
+function NavBrand({ scrollAtTop }) {
     return (
         <motion.a
             href="#"
             className="flex items-center"
             initial={{ x: 0 }}
-            whileHover={{ x: 5 }}
+            whileHover={{ x: 10 }}
         >
             <span
                 className={
                     "self-center text-4xl font-semibold font-mono " +
                     "transition-colors p-1 rounded " +
                     `${
-                        colorChange
+                        scrollAtTop
                             ? "text-black md:hover:bg-gradient-to-r " +
                               "md:hover:from-amber-600 md:hover:to-pink-500 " +
                               "md:hover:bg-clip-text md:hover:text-transparent"

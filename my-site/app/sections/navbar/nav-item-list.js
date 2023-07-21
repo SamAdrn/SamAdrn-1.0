@@ -1,27 +1,43 @@
 import NavItem from "./nav-item";
+import { motion, AnimatePresence } from "framer-motion";
 
-function NavItemList({ visibleState, colorChange }) {
+function NavItemList({ isMobile, mobileNavVisible, scrollAtTop }) {
+    const variants = {
+        open: { opacity: 1, height: "auto" },
+        closed: { opacity: 0, height: 0 },
+    };
+
     return (
-        <div
-            className={`items-center justify-between w-full ${
-                visibleState ? "" : "hidden"
-            } md:flex md:w-auto ${
-                colorChange ? "bg-slate-100" : "bg-pink-400"
-            }`}
-        >
-            <ul
-                className={
-                    "flex flex-col p-4 mt-4 font-medium transition-colors " +
-                    "md:flex-row md:p-0 md:space-x-8 md:mt-0 md:border-0 " +
-                    " " +
-                    `${colorChange ? "bg-slate-100" : "bg-pink-400"}`
-                }
-            >
-                <NavItem title="Projects" colorChange={colorChange} />
-                <NavItem title="About Me" colorChange={colorChange} />
-                <NavItem title="Contact" colorChange={colorChange} />
-            </ul>
-        </div>
+        <AnimatePresence>
+            {(!isMobile || mobileNavVisible) && (
+                <motion.div
+                    className={`items-center justify-between w-full ${
+                        "" // mobileNavVisible ? "" : "hidden"
+                    } md:flex md:w-auto transition-colors ${
+                        scrollAtTop ? "bg-slate-100" : "bg-amber-500"
+                    }`}
+                    variants={variants}
+                    initial="closed"
+                    animate="open"
+                    exit="closed"
+                >
+                    <motion.ul
+                        className={
+                            "flex flex-col p-4 mt-4 font-medium transition-colors " +
+                            "md:flex-row md:p-0 md:space-x-8 md:mt-0 md:border-0 " +
+                            " " +
+                            `${scrollAtTop ? "bg-slate-100" : "bg-amber-500"}`
+                            // `${scrollAtTop ? "bg-slate-100" : "bg-orange-500"}`
+                        }
+                        variants={variants}
+                    >
+                        <NavItem title="Projects" scrollAtTop={scrollAtTop} />
+                        <NavItem title="About Me" scrollAtTop={scrollAtTop} />
+                        <NavItem title="Contact" scrollAtTop={scrollAtTop} />
+                    </motion.ul>
+                </motion.div>
+            )}
+        </AnimatePresence>
     );
 }
 

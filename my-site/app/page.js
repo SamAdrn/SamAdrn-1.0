@@ -4,6 +4,7 @@ import Home from "./sections/home/home";
 import Navbar from "./sections/navbar/navbar";
 
 export default function Page() {
+    const isMobile = window.innerWidth < 768;
 
     return (
         <div
@@ -12,9 +13,9 @@ export default function Page() {
                 "justify-between p-16 "
             }
         >
-            <Navbar />
+            <Navbar isMobile={isMobile} />
 
-            <Home />
+            <Home isMobile={isMobile} />
         </div>
     );
 }

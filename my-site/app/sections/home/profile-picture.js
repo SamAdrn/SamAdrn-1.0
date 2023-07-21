@@ -3,9 +3,8 @@ import React, { useState, useEffect } from "react";
 import ProfileIcon from "./profile-icons";
 import { motion } from "framer-motion";
 
-function ProfilePicture() {
+function ProfilePicture({ isMobile }) {
     const [anim, setAnim] = useState(false);
-    const isMobile = window.innerWidth < 768;
 
     useEffect(() => {
         const intro = () => {
@@ -32,7 +31,9 @@ function ProfilePicture() {
 
     return (
         <div
-            className={"w-4/6 mb-5 md:h-3/6 md:m-20 flex justify-center items-center"}
+            className={
+                "w-4/6 mb-5 md:h-3/6 md:m-20 flex justify-center items-center"
+            }
         >
             <motion.img
                 className={"rounded-full drop-shadow-xl h-full z-10"}

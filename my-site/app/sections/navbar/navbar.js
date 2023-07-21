@@ -5,41 +5,44 @@ import NavBrand from "./nav-brand";
 import BurgerMenu from "./burger-menu";
 import NavItemList from "./nav-item-list";
 
-function Navbar({ scroll }) {
-    const [isVisible, setIsVisible] = useState(false);
-    const [colorChange, setColorchange] = useState(false);
+function Navbar({ isMobile }) {
+    const [mobileNavVisible, setMobileNavVisible] = useState(false);
+    const [isScrollAtTop, setIsScrollAtTop] = useState(false);
 
-    const changeNavbarColor = () => {
+    const updateScroll = () => {
         if (window.scrollY >= 60) {
-            setColorchange(true);
+            setIsScrollAtTop(true);
         } else {
-            setColorchange(false);
+            setIsScrollAtTop(false);
         }
     };
-    window.addEventListener("scroll", changeNavbarColor);
+    window.addEventListener("scroll", updateScroll);
 
     return (
         <nav
             className={
                 "fixed w-full z-20 top-0 left-0 pb-1 transition-colors " +
-                `${colorChange ? "bg-slate-100 shadow-lg" : "bg-pink-400"}`
+                `${isScrollAtTop ? "bg-slate-100 shadow-lg" : "bg-amber-500"}`
+                // `${scrollAtTop ? "bg-slate-100 shadow-lg" : "bg-orange-500"}`
             }
         >
             <div
                 className={
                     "max-w-screen-xl flex flex-wrap items-center " +
                     "justify-between mx-auto p-4 transition-colors " +
-                    `${colorChange ? "bg-slate-100" : "bg-pink-400"}`
+                    `${isScrollAtTop ? "bg-slate-100" : "bg-amber-500"}`
+                    // `${scrollAtTop ? "bg-slate-100" : "bg-orange-500"}`
                 }
             >
-                <NavBrand colorChange={colorChange} />
+                <NavBrand scrollAtTop={isScrollAtTop} />
                 <BurgerMenu
-                    onClick={() => setIsVisible((b) => !b)}
-                    colorChange={colorChange}
+                    onClick={() => setMobileNavVisible((b) => !b)}
+                    scrollAtTop={isScrollAtTop}
                 />
                 <NavItemList
-                    visibleState={isVisible}
-                    colorChange={colorChange}
+                    isMobile={isMobile}
+                    mobileNavVisible={mobileNavVisible}
+                    scrollAtTop={isScrollAtTop}
                 />
             </div>
         </nav>
