@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import NavItem from "./nav-item";
 
 function NavItemList({ visibleState, colorChange }) {
@@ -18,7 +17,6 @@ function NavItemList({ visibleState, colorChange }) {
                     `${colorChange ? "bg-slate-100" : "bg-pink-400"}`
                 }
             >
-                <NavItem title="Home" colorChange={colorChange} />
                 <NavItem title="Projects" colorChange={colorChange} />
                 <NavItem title="About Me" colorChange={colorChange} />
                 <NavItem title="Contact" colorChange={colorChange} />

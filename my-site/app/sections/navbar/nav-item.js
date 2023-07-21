@@ -1,22 +1,28 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function NavItem({ title = "nav item", href = "#", colorChange }) {
     return (
         <li>
-            <a
+            <motion.a
                 href={href}
                 className={
                     "block py-2 pl-3 pr-4 text-black " +
                     "text-xl rounded md:bg-transparent " +
-                    "md:p-0 transition-colors " +
+                    "md:p-2 transition-colors " +
                     `${
-                        colorChange ? "text-black" : "text-white drop-shadow-md"
+                        colorChange
+                            ? "text-black md:hover:text-orange-500"
+                            : "text-white drop-shadow-md md:hover:bg-white " +
+                              "md:hover:text-black"
                     }`
                 }
                 // aria-current="page"
+                initial={{ y: 0 }}
+                whileHover={{ y: -5 }}
             >
                 {title}
-            </a>
+            </motion.a>
         </li>
     );
 }
