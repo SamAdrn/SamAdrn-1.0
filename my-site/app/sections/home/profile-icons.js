@@ -6,7 +6,7 @@ function ProfileIcon({ i, state, transX, transY, icon }) {
     return (
         <motion.img
             key={i}
-            className="absolute w-16 h-16 z-0"
+            className="absolute w-16 h-16 z-0 drop-shadow-lg"
             initial={{ x: 0, y: 0 }}
             animate={{ x: state ? transX : 0, y: state ? transY : 0 }}
             transition={{ type: "spring" }}

@@ -23,19 +23,19 @@ function ProfilePicture() {
         { icon: "css", x: "-17rem", y: 0 },
         { icon: "react", x: "-15rem", y: "7rem" },
         { icon: "nodejs", x: "-12rem", y: "13rem" },
-        { icon: "java", x: "15rem", y: "-7rem" },
-        { icon: "python", x: "17rem", y: 0 },
+        { icon: "swift", x: "15rem", y: "-7rem" },
+        { icon: "java", x: "17rem", y: 0 },
         { icon: "ruby", x: "15rem", y: "7rem" },
-        { icon: "swift", x: "12rem", y: "13rem" },
+        { icon: "python", x: "12rem", y: "13rem" },
         { icon: "git", x: "11rem", y: "-13rem" },
     ];
 
     return (
         <div
-            className={"mb-5 md:h-3/6 md:m-20 flex justify-center items-center"}
+            className={"w-4/6 mb-5 md:h-3/6 md:m-20 flex justify-center items-center"}
         >
             <motion.img
-                className={"rounded-full shadow-md h-full z-10"}
+                className={"rounded-full drop-shadow-xl h-full z-10"}
                 src="/profile.jpg"
                 alt="Picture of the author"
                 onHoverStart={() => setAnim(true)}

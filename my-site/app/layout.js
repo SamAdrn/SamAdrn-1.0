@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Open_Sans, Roboto_Mono } from "next/font/google";
+import { Open_Sans, Roboto_Mono, Poppins } from "next/font/google";
 
 const open_sans = Open_Sans({
     subsets: ["latin"],
@@ -13,6 +13,13 @@ const roboto_mono = Roboto_Mono({
     variable: "--font-roboto-mono",
 });
 
+const poppins = Poppins({
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-poppins",
+    weight: ['200', '400', '600'],
+});
+
 export const metadata = {
     title: "Samuel Kosasih",
     description:
@@ -24,7 +31,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${open_sans.className} ${roboto_mono.variable} bg-slate-100`}
+                className={`${open_sans.className} ${roboto_mono.variable}`}
             >
                 <script
                     src="https://kit.fontawesome.com/b079da69e8.js"

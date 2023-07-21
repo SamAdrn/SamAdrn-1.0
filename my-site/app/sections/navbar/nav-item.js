@@ -1,16 +1,17 @@
 import React from "react";
 
-function NavItem({ title = "nav item", href = "#" }) {
+function NavItem({ title = "nav item", href = "#", colorChange }) {
     return (
         <li>
             <a
                 href={href}
                 className={
-                    "block py-2 pl-3 pr-4 text-black active:bg-orange-600 " +
-                    "active:text-white text-xl rounded md:bg-transparent " +
-                    "md:p-0 md:hover:text-orange-600 md:hover:-translate-y-1 " +
-                    "md:active:text-orange-600 md:active:bg-slate-100 " +
-                    "transition-all duration-500"
+                    "block py-2 pl-3 pr-4 text-black " +
+                    "text-xl rounded md:bg-transparent " +
+                    "md:p-0 transition-colors " +
+                    `${
+                        colorChange ? "text-black" : "text-white drop-shadow-md"
+                    }`
                 }
                 // aria-current="page"
             >
