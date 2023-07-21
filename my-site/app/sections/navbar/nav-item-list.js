@@ -3,7 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function NavItemList({ isMobile, mobileNavVisible, scrollAtTop }) {
     const variants = {
-        open: { opacity: 1, height: "auto" },
+        open: {
+            opacity: 1,
+            height: "auto",
+            transition: {
+                delayChildren: 0.2,
+                staggerChildren: 0.2,
+            },
+        },
         closed: { opacity: 0, height: 0 },
     };
 

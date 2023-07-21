@@ -2,8 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function NavItem({ title = "nav item", href = "#", scrollAtTop }) {
+    const variants = {
+        open: { opacity: 1, height: "auto",  },
+        closed: { opacity: 0, height: 0 },
+    };
     return (
-        <li>
+        <motion.li variants={variants}>
             <motion.a
                 href={href}
                 className={
@@ -23,7 +27,7 @@ function NavItem({ title = "nav item", href = "#", scrollAtTop }) {
             >
                 {title}
             </motion.a>
-        </li>
+        </motion.li>
     );
 }
 
