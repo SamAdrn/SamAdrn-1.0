@@ -7,7 +7,7 @@ function PageButton({ label, setActivePage, activePage, pageNum }) {
             role="button"
             className={
                 "px-3 py-3 font-mono my-2 mx-1 rounded-md " +
-                "transition-colors md:px-36 md:text-xl md:py-2 " +
+                "transition-colors md:px-16 lg:px-28 md:text-xl lg:py-2 " +
                 `${
                     activePage == pageNum
                         ? "shadow-md bg-white"

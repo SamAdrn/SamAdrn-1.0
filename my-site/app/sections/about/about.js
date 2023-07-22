@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import PageButton from "./page-button";
 import Subtitle from "./subtitle";
 import AboutSubpage from "./about-subpage";
 import MainButton from "@/app/components/main-button";
+import EducationSubpage from "./education-subpage";
+import ExperienceSubpage from "./experience-subpage";
 
 function About({ isMobile }) {
     const pages = ["About", "Education", "Experience"];
@@ -15,8 +17,7 @@ function About({ isMobile }) {
     return (
         <motion.div
             className={
-                "w-screen h-fit flex flex-col justify-center items-center " +
-                "md:h-screen"
+                "w-screen h-fit flex flex-col justify-center items-center py-10 lg:py-28"
             }
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +37,20 @@ function About({ isMobile }) {
             </div>
 
             <div className="bg-slate-100 w-screen h-fit flex justify-center p-12">
-                <AboutSubpage isMobile={isMobile}/>
+                <MotionConfig
+                    transition={{
+                        x: { type: "spring", stiffness: 300, damping: 30 },
+                        opacity: { duration: 0.5 },
+                    }}
+                >
+                    {page == 0 ? <AboutSubpage isMobile={isMobile} /> : null}
+                    {page == 1 ? (
+                        <EducationSubpage />
+                    ) : null}
+                    {page == 2 ? (
+                        <ExperienceSubpage />
+                    ) : null}
+                </MotionConfig>
             </div>
         </motion.div>
     );

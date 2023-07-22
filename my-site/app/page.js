@@ -1,6 +1,6 @@
 "use client";
 
-import About from "./about/about";
+import About from "./sections/about/about";
 import Home from "./sections/home/home";
 import Navbar from "./sections/navbar/navbar";
 
