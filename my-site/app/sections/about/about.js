@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, MotionConfig } from "framer-motion";
 import PageButton from "./page-button";
 import Subtitle from "./subtitle";
@@ -8,50 +8,101 @@ import AboutSubpage from "./about-subpage";
 import MainButton from "@/app/components/main-button";
 import EducationSubpage from "./education-subpage";
 import ExperienceSubpage from "./experience-subpage";
+import { root } from "postcss";
 
 function About({ isMobile }) {
     const pages = ["About", "Education", "Experience"];
-
     const [page, setPage] = useState(0);
+
+    const rootVariant = {
+        enter: {
+            opacity: 0,
+        },
+        center: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.7,
+                staggerChildren: 0.3,
+            },
+        },
+    };
+
+    const childVariant = {
+        enter: {
+            opacity: 0,
+            scale: 0,
+        },
+        center: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                type: "spring",
+            },
+        },
+    };
+
+    const pageButtonDivVariant = {
+        enter: {
+            opacity: 0,
+            scale: 0,
+        },
+        center: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                type: "spring",
+                staggerChildren: 0.3,
+            },
+        },
+    };
 
     return (
         <motion.div
-            className={
-                "w-screen h-fit flex flex-col justify-center items-center py-10 lg:py-28"
-            }
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial="enter"
+            whileInView="center"
+            viewport={{ once: true }}
+            variants={rootVariant}
         >
-            <Subtitle />
+            <motion.div
+                className={
+                    "w-screen h-fit flex flex-col justify-center items-center py-10 lg:py-28"
+                }
+            >
+                <Subtitle />
 
-            <div className={"m-6 flex flex-row bg-slate-200 rounded-lg px-1"}>
-                {pages.map((e, i) => (
-                    <PageButton
-                        label={e}
-                        setActivePage={setPage}
-                        activePage={page}
-                        pageNum={i}
-                    />
-                ))}
-            </div>
-
-            <div className="bg-slate-100 w-screen h-fit flex justify-center p-12">
-                <MotionConfig
-                    transition={{
-                        x: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.5 },
-                    }}
+                <motion.div
+                    className={"m-6 flex flex-row bg-slate-200 rounded-lg px-1"}
+                    variants={pageButtonDivVariant}
                 >
-                    {page == 0 ? <AboutSubpage isMobile={isMobile} /> : null}
-                    {page == 1 ? (
-                        <EducationSubpage />
-                    ) : null}
-                    {page == 2 ? (
-                        <ExperienceSubpage />
-                    ) : null}
-                </MotionConfig>
-            </div>
+                    {pages.map((e, i) => (
+                        <PageButton
+                            label={e}
+                            setActivePage={setPage}
+                            activePage={page}
+                            pageNum={i}
+                        />
+                    ))}
+                </motion.div>
+
+                <motion.div
+                    className={
+                        "bg-slate-100 w-screen h-fit flex justify-center p-12"
+                    }
+                >
+                    <MotionConfig
+                        transition={{
+                            x: { type: "spring", stiffness: 300, damping: 30 },
+                            opacity: { duration: 0.5 },
+                        }}
+                    >
+                        {page == 0 ? (
+                            <AboutSubpage isMobile={isMobile} />
+                        ) : null}
+                        {page == 1 ? <EducationSubpage /> : null}
+                        {page == 2 ? <ExperienceSubpage /> : null}
+                    </MotionConfig>
+                </motion.div>
+            </motion.div>
         </motion.div>
     );
 }

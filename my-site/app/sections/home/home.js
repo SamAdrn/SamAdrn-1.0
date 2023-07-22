@@ -11,12 +11,10 @@ function Home({ isMobile }) {
         <motion.div
             className={
                 "w-screen h-screen flex flex-col justify-center items-center " +
-                "pb-24 text-center bg-gradient-to-t from-red-400 to-amber-500 " + 
+                "pb-24 text-center bg-gradient-to-t from-red-400 to-amber-500 " +
                 "shadow-lg"
             }
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            
         >
             <ProfilePicture isMobile={isMobile} />
             <Title />

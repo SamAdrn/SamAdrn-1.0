@@ -1,8 +1,24 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function PageButton({ label, setActivePage, activePage, pageNum }) {
+    const buttonVariant = {
+        enter: {
+            opacity: 0,
+            scale: 0,
+        },
+        center: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                type: "spring",
+                stiffness: 100,
+            },
+        },
+    };
+
     return (
-        <div
+        <motion.div
             key={pageNum}
             role="button"
             className={
@@ -15,9 +31,10 @@ function PageButton({ label, setActivePage, activePage, pageNum }) {
                 }`
             }
             onClick={() => setActivePage(pageNum)}
+            variants={buttonVariant}
         >
             {label}
-        </div>
+        </motion.div>
     );
 }
 
