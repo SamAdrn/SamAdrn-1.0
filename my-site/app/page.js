@@ -1,5 +1,6 @@
 "use client";
 
+import About from "./about/about";
 import Home from "./sections/home/home";
 import Navbar from "./sections/navbar/navbar";
 
@@ -16,6 +17,8 @@ export default function Page() {
             <Navbar isMobile={isMobile} />
 
             <Home isMobile={isMobile} />
+
+            <About isMobile={isMobile} />
         </div>
     );
 }

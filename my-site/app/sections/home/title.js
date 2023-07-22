@@ -5,7 +5,7 @@ function Title() {
         <div>
             <h1
                 className={
-                    "text-5xl md:text-7xl font-bold font-sans " +
+                    "text-5xl md:text-7xl font-bold font-display " +
                     "cursor-default text-white drop-shadow-lg"
                 }
             >

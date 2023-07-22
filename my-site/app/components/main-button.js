@@ -9,9 +9,9 @@ function MainButton({
         <button
             type="button"
             className={
-                "text-sm text-slate-50 font-medium text-center " +
+                "text-sm text-slate-50 font-medium text-center font-sans " +
                 "bg-orange-500 hover:bg-orange-400 active:bg-yellow-400 " +
-                "rounded-lg px-4 py-2 " +
+                "rounded-lg px-4 py-2 transition-colors " +
                 "md:text-lg md:px-5 md:py-3 " +
                 `${additionalStyles}`
             }

@@ -17,7 +17,7 @@ const poppins = Poppins({
     subsets: ["latin"],
     display: "swap",
     variable: "--font-poppins",
-    weight: ['200', '400', '600'],
+    weight: ["200", "400", "600"],
 });
 
 export const metadata = {
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${open_sans.className} ${roboto_mono.variable}`}
+                className={`${open_sans.className} ${roboto_mono.variable} ${poppins.variable}`}
             >
                 <script
                     src="https://kit.fontawesome.com/b079da69e8.js"

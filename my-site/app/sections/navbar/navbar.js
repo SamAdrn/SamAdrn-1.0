@@ -16,6 +16,7 @@ function Navbar({ isMobile }) {
             setIsScrollAtTop(false);
         }
     };
+    
     window.addEventListener("scroll", updateScroll);
 
     return (
@@ -23,7 +24,6 @@ function Navbar({ isMobile }) {
             className={
                 "fixed w-full z-20 top-0 left-0 pb-1 transition-colors " +
                 `${isScrollAtTop ? "bg-slate-100 shadow-lg" : "bg-amber-500"}`
-                // `${scrollAtTop ? "bg-slate-100 shadow-lg" : "bg-orange-500"}`
             }
         >
             <div
@@ -31,7 +31,6 @@ function Navbar({ isMobile }) {
                     "max-w-screen-xl flex flex-wrap items-center " +
                     "justify-between mx-auto p-4 transition-colors " +
                     `${isScrollAtTop ? "bg-slate-100" : "bg-amber-500"}`
-                    // `${scrollAtTop ? "bg-slate-100" : "bg-orange-500"}`
                 }
             >
                 <NavBrand scrollAtTop={isScrollAtTop} />

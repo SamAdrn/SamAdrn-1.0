@@ -23,16 +23,16 @@ function ProfilePicture({ isMobile }) {
         { icon: "react", x: "-15rem", y: "7rem" },
         { icon: "nodejs", x: "-12rem", y: "13rem" },
         { icon: "swift", x: "15rem", y: "-7rem" },
-        { icon: "java", x: "17rem", y: 0 },
+        { icon: "python", x: "17rem", y: 0 },
         { icon: "ruby", x: "15rem", y: "7rem" },
-        { icon: "python", x: "12rem", y: "13rem" },
-        { icon: "git", x: "11rem", y: "-13rem" },
+        { icon: "git", x: "12rem", y: "13rem" },
+        { icon: "java", x: "11rem", y: "-13rem" },
     ];
 
     return (
         <div
             className={
-                "w-4/6 mb-5 md:h-3/6 md:m-20 flex justify-center items-center"
+                "w-4/6 mb-5 md:h-3/6 md:m-14 flex justify-center items-center"
             }
         >
             <motion.img

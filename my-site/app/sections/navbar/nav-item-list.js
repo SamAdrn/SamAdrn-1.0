@@ -18,12 +18,11 @@ function NavItemList({ isMobile, mobileNavVisible, scrollAtTop }) {
         <AnimatePresence>
             {(!isMobile || mobileNavVisible) && (
                 <motion.div
-                    className={`items-center justify-between w-full ${
-                        "" // mobileNavVisible ? "" : "hidden"
-                    } md:flex md:w-auto transition-colors ${
+                    className={`items-center justify-between w-full  md:flex 
+                    md:w-auto transition-colors ${
                         scrollAtTop ? "bg-slate-100" : "bg-amber-500"
                     }`}
-                    variants={variants}
+                    variants={isMobile ? variants : {}}
                     initial="closed"
                     animate="open"
                     exit="closed"
@@ -34,13 +33,24 @@ function NavItemList({ isMobile, mobileNavVisible, scrollAtTop }) {
                             "md:flex-row md:p-0 md:space-x-8 md:mt-0 md:border-0 " +
                             " " +
                             `${scrollAtTop ? "bg-slate-100" : "bg-amber-500"}`
-                            // `${scrollAtTop ? "bg-slate-100" : "bg-orange-500"}`
                         }
-                        variants={variants}
+                        variants={isMobile ? variants : {}}
                     >
-                        <NavItem title="Projects" scrollAtTop={scrollAtTop} />
-                        <NavItem title="About Me" scrollAtTop={scrollAtTop} />
-                        <NavItem title="Contact" scrollAtTop={scrollAtTop} />
+                        <NavItem
+                            title="About Me"
+                            scrollAtTop={scrollAtTop}
+                            isMobile={isMobile}
+                        />
+                        <NavItem
+                            title="Projects"
+                            scrollAtTop={scrollAtTop}
+                            isMobile={isMobile}
+                        />
+                        <NavItem
+                            title="Contact"
+                            scrollAtTop={scrollAtTop}
+                            isMobile={isMobile}
+                        />
                     </motion.ul>
                 </motion.div>
             )}
