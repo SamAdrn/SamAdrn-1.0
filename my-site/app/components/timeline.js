@@ -11,14 +11,14 @@ function Timeline({ title, subtitle, icon, data }) {
             <div
                 className={
                     "flex flex-col justify-start items-center " +
-                    "h-full lg:items-start lg:col-span-3 lg:py-10"
+                    "h-full lg:col-span-3 lg:py-10"
                 }
             >
                 <div className="flex flex-row mb-2 lg:flex-col">
                     <img
                         className="h-8 inline me-3 md:h-10 lg:h-20 lg:mb-6"
                         src={`/icons/${icon}.svg`}
-                        alt={`${icon}`}
+                        alt={`${icon} Icon`}
                     />
                     <h2
                         className={
@@ -29,10 +29,12 @@ function Timeline({ title, subtitle, icon, data }) {
                         {title}
                     </h2>
                 </div>
-                <p>{subtitle}</p>
+                <p className={"font-medium font-display mt-2 md:text-xl"}>
+                    {subtitle}
+                </p>
             </div>
-            <div className="lg:col-span-9 mt-10 md:mx-10">
-                <ol className="relative border-l border-slate-200 ps-4">
+            <div className="lg:col-span-9 mt-10 mx-7 md:mx-10">
+                <ol className="relative border-l border-slate-200 ms-4 ps-4">
                     {data.map((event, i) => (
                         <li className="mb-10 ml-6">
                             <span

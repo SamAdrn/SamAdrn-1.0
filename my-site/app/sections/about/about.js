@@ -5,10 +5,9 @@ import { motion, MotionConfig } from "framer-motion";
 import PageButton from "./page-button";
 import Subtitle from "./subtitle";
 import AboutSubpage from "./about-subpage";
-import MainButton from "@/app/components/main-button";
 import EducationSubpage from "./education-subpage";
 import ExperienceSubpage from "./experience-subpage";
-import { root } from "postcss";
+import MainButton from "@/app/components/main-button";
 
 function About({ isMobile }) {
     const pages = ["About", "Education", "Experience"];
@@ -65,7 +64,8 @@ function About({ isMobile }) {
         >
             <motion.div
                 className={
-                    "w-screen h-fit flex flex-col justify-center items-center py-10 lg:py-28"
+                    "w-screen h-fit flex flex-col justify-center " +
+                    "items-center py-10 lg:py-28"
                 }
             >
                 <Subtitle />
@@ -86,7 +86,7 @@ function About({ isMobile }) {
 
                 <motion.div
                     className={
-                        "bg-slate-100 w-screen h-fit flex justify-center p-12"
+                        "bg-slate-100 w-screen h-fit flex justify-center py-12"
                     }
                 >
                     <MotionConfig
@@ -95,9 +95,7 @@ function About({ isMobile }) {
                             opacity: { duration: 0.5 },
                         }}
                     >
-                        {page == 0 ? (
-                            <AboutSubpage isMobile={isMobile} />
-                        ) : null}
+                        {page == 0 ? <AboutSubpage /> : null}
                         {page == 1 ? <EducationSubpage /> : null}
                         {page == 2 ? <ExperienceSubpage /> : null}
                     </MotionConfig>
