@@ -7,9 +7,8 @@ import Subtitle from "./subtitle";
 import AboutSubpage from "./about-subpage";
 import EducationSubpage from "./education-subpage";
 import ExperienceSubpage from "./experience-subpage";
-import MainButton from "@/app/components/main-button";
 
-function About({ isMobile }) {
+function About() {
     const pages = ["About", "Education", "Experience"];
     const [page, setPage] = useState(0);
 

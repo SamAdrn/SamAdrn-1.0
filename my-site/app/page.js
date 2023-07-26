@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import About from "./sections/about/about";
 import Home from "./sections/home/home";
 import Navbar from "./sections/navbar/navbar";
+import Projects from "./sections/projects/projects";
 
 export default function Page() {
     const isMobile = window.innerWidth < 768;
@@ -36,6 +37,8 @@ export default function Page() {
             <Home isMobile={isMobile} />
 
             <About isMobile={isMobile} />
+
+            <Projects isMobile={isMobile} />
         </motion.div>
     );
 }
