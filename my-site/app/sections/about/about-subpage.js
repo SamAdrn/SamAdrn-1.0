@@ -53,11 +53,11 @@ function AboutSubpage() {
                                     "text-3xl mb-2 md:text-4xl"
                                 }
                             >
-                                About Me
+                                About
                             </h2>
                         </div>
                         <p className="font-medium font-display mt-2 md:text-xl">
-                            A brief history of me
+                            A brief description of me
                         </p>
                     </div>
                     <div className="lg:col-span-4 mt-10 md:mx-10 lg:m-0">
@@ -75,7 +75,7 @@ function AboutSubpage() {
                             <ContactBar />
                         </div>
                     </div>
-                    <div className="flex p-16 lg:p-0 lg:px-10 lg:col-span-5 items-center ">
+                    <div className="flex p-16 lg:p-0 lg:px-10 lg:col-span-5 items-center">
                         <Description />
                     </div>
                 </div>

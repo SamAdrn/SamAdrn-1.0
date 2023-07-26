@@ -29,7 +29,7 @@ function Timeline({ title, subtitle, icon, data }) {
                         {title}
                     </h2>
                 </div>
-                <p className={"font-medium font-display mt-2 md:text-xl"}>
+                <p className={"font-medium font-display mt-2 md:text-md"}>
                     {subtitle}
                 </p>
             </div>
