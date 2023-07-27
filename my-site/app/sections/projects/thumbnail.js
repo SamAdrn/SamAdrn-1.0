@@ -6,13 +6,14 @@ const overlayVariants = {
     hover: { opacity: 1 },
 };
 
-function Thumbnail({ isMobile }) {
+function Thumbnail({ isMobile, onClick }) {
     const controls = useAnimationControls();
     return (
         <motion.div
             className={
-                "bg-slate-200 h-[20vh] m-4 md:m-6 rounded-lg shadow-lg relative"
+                "bg-slate-200 h-[20vh] m-4 md:m-6 rounded-lg shadow-lg relative cursor-pointer"
             }
+            onClick={onClick}
         >
             <img
                 className="h-full w-full object-cover rounded-lg"
