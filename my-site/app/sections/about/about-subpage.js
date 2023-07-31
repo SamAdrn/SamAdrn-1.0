@@ -2,6 +2,8 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ContactBar from "./contact-bar";
 import Description from "./description";
+import { simpleIcons } from "@/app/components/constants";
+import SVG from "@/app/components/svg";
 
 function AboutSubpage() {
     const variants = {
@@ -42,10 +44,11 @@ function AboutSubpage() {
                         }
                     >
                         <div className="flex flex-row mb-2 lg:flex-col">
-                            <img
-                                className="h-8 inline me-3 md:h-10 lg:h-20 lg:mb-6"
-                                src="/icons/info.svg"
-                                alt="Info Icon"
+                            <SVG
+                                className={
+                                    "flex justify-center h-8 me-3 md:h-10 lg:me-0 lg:h-20 lg:mb-6"
+                                }
+                                icon="info"
                             />
                             <h2
                                 className={
@@ -62,7 +65,9 @@ function AboutSubpage() {
                     </div>
                     <div className="lg:col-span-4 mt-10 md:mx-10 lg:m-0">
                         <div
-                            className={"flex justify-center px-20 md:px-10 lg:flex-col"}
+                            className={
+                                "flex justify-center px-20 md:px-10 lg:flex-col"
+                            }
                         >
                             <img
                                 className={

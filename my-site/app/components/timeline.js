@@ -1,4 +1,5 @@
 import React from "react";
+import SVG from "./svg";
 
 function Timeline({ title, subtitle, icon, data }) {
     return (
@@ -15,10 +16,11 @@ function Timeline({ title, subtitle, icon, data }) {
                 }
             >
                 <div className="flex flex-row mb-2 lg:flex-col">
-                    <img
-                        className="h-8 inline me-3 md:h-10 lg:h-20 lg:mb-6"
-                        src={`/icons/${icon}.svg`}
-                        alt={`${icon} Icon`}
+                    <SVG
+                        className={
+                            "flex justify-center h-8 me-3 md:h-10 lg:me-0 lg:h-20 lg:mb-6"
+                        }
+                        icon={`${icon}`}
                     />
                     <h2
                         className={
