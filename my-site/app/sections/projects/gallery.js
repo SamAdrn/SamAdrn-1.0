@@ -16,7 +16,7 @@ function Gallery({ isMobile }) {
         <motion.div
             className={
                 "w-screen grid grid-cols-1 px-10 py-20 " +
-                "md:grid-cols-3 lg:px-40 lg:py-20"
+                "md:grid-cols-2 lg:grid-cols-3 lg:px-40 lg:py-20"
             }
         >
             <Thumbnail

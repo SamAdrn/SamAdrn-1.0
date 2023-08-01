@@ -4,7 +4,7 @@ import React from "react";
 import Title from "./title";
 import ProfilePicture from "./profile-picture";
 import { motion } from "framer-motion";
-import MainButton from "@/app/components/main-button";
+import Button from "@/app/components/button";
 
 function Home({ isMobile }) {
     return (
@@ -18,7 +18,7 @@ function Home({ isMobile }) {
         >
             <ProfilePicture isMobile={isMobile} />
             <Title />
-            <MainButton
+            <Button
                 title="View My Resume"
                 additionalStyles={
                     "m-10 md:px-10 bg-white text-slate-800 " +

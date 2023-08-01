@@ -1,25 +1,25 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-function MainButton({
+function Button({
     title = "Click",
     onClick = () => console.log("clicked"),
-    additionalStyles = ""
+    style = "",
 }) {
     return (
-        <button
+        <motion.button
             type="button"
             className={
-                "text-sm text-slate-50 font-medium text-center font-sans " +
-                "bg-orange-500 hover:bg-orange-400 active:bg-yellow-400 " +
+                "text-sm font-medium text-center font-sans " +
                 "rounded-lg px-4 py-2 transition-colors " +
                 "md:text-lg md:px-5 md:py-3 " +
-                `${additionalStyles}`
+                `${style}`
             }
             onClick={onClick}
         >
             {title}
-        </button>
+        </motion.button>
     );
 }
 
-export default MainButton;
+export default Button;

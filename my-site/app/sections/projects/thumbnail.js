@@ -11,7 +11,7 @@ function Thumbnail({ isMobile, onClick }) {
     return (
         <motion.div
             className={
-                "bg-slate-200 h-[20vh] md:h-[10vh] lg:md:h-[20vh] m-4 lg:m-6 rounded-lg shadow-lg relative cursor-pointer"
+                "bg-slate-200 h-[20vh] md:h-[15vh] lg:md:h-[20vh] m-4 lg:m-6 rounded-lg shadow-lg relative cursor-pointer"
             }
         >
             <img
@@ -34,18 +34,11 @@ function Thumbnail({ isMobile, onClick }) {
                 onHoverEnd={() => {
                     if (!isMobile) controls.start("rest");
                 }}
-                onTap={() => {
-                    if (isMobile) controls.start("hover");
-                }}
-                onTapCancel={() => {
-                    if (isMobile) controls.start("rest");
-                }}
+                onTap={onClick}
             >
                 <h2 className={""}>Project</h2>
                 <h2 className={""}>Java | OCaml</h2>
-                <h2 className={""} onClick={onClick}>
-                    Learn More
-                </h2>
+                <h2 className={""}>Learn More</h2>
             </motion.div>
         </motion.div>
     );
