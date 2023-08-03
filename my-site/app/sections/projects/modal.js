@@ -6,24 +6,19 @@ import SVG from "@/app/components/svg";
 import Button from "@/app/components/button";
 
 const Modal = ({ handleClose, data }) => {
-    const images = [
-        "https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/04/supra-drift.jpg",
-        "https://e1.pxfuel.com/desktop-wallpaper/999/1018/desktop-wallpaper-mitsubishi-evolution-iii-evo-3.jpg",
-        "https://www.motortrend.com/uploads/2022/04/s15-silvia-specR-hood-off.jpg",
-    ];
-
-    const sourceIcons = ["github", "mail", "linkedin"];
-    const techstack = ["java", "react", "firebase", "ansic"];
-
-    const [index, setIndex] = useState(0);
+    const [carouselIndex, setCarouselIndex] = useState(0);
 
     const Arrow = ({ direction }) => {
         const next = () => {
-            setIndex((p) => (p + 1 === images.length ? 0 : p + 1));
+            setCarouselIndex((p) =>
+                p + 1 === data.numPreviewImages ? 0 : p + 1
+            );
         };
 
         const prev = () => {
-            setIndex((p) => (p - 1 < 0 ? images.length - 1 : p - 1));
+            setCarouselIndex((p) =>
+                p - 1 < 0 ? data.numPreviewImages - 1 : p - 1
+            );
         };
 
         return (
@@ -31,12 +26,17 @@ const Modal = ({ handleClose, data }) => {
                 <SVG
                     icon={direction === "left" ? "chevronleft" : "chevronright"}
                     className={
-                        "fill-white absolute inset-y-0 top-1/2 -translate-y-4 h-10 " +
+                        "absolute inset-y-0 top-1/2 -translate-y-4 h-10 " +
                         "drop-shadow-lg p-1 z-30 cursor-pointer " +
                         `${
                             direction === "left"
                                 ? "left-0 ms-3"
                                 : "right-0 me-3"
+                        } ` +
+                        `${
+                            data.carouselScheme === "dark"
+                                ? "fill-slate-800"
+                                : "fill-white"
                         }`
                     }
                     onClick={direction === "left" ? prev : next}
@@ -59,7 +59,7 @@ const Modal = ({ handleClose, data }) => {
             exit={{
                 opacity: 0,
                 y: 500,
-                transition: { duration: 0.8, type: "spring" },
+                transition: { duration: 0.7, type: "spring" },
             }}
         >
             <div className="flex flex-col lg:flex-row w-full">
@@ -74,46 +74,82 @@ const Modal = ({ handleClose, data }) => {
                         className={
                             "font-bold font-display text-white " +
                             "text-3xl md:text-4xl lg:text-5xl " +
-                            "mb-2 md:mb-4 lg:mb-3"
+                            "mb-1 md:mb-2 lg:mb-3"
                         }
                     >
-                        Pocket Garage
+                        {data.title}
                     </h2>
                     <div
                         className={
-                            "hidden lg:flex flex-row flex-wrap mb-5 font-mono " +
-                            "text-slate-100 "
+                            "flex flex-row flex-wrap mb-3 font-mono " +
+                            "text-slate-100 md:text-lg lg:text-md"
                         }
                     >
-                        #reactnative #mobiledevelopment
+                        {data.hashtags.join(" ")}
                     </div>
                     <h2
                         className={
-                            "font-mono text-white text-lg mb-5 md:text-2xl " +
+                            "font-mono text-white text-lg mb-3 md:text-2xl " +
                             "lg:text-xl"
                         }
                     >
-                        Java | Python | Swift
+                        {data.languages.length === 1 && (
+                            <span>Written in </span>
+                        )}
+                        {data.languages.join(" | ")}
                     </h2>
 
                     <div
                         className={
-                            "flex flex-row w-full justify-between px-5 " +
-                            "mt-5 md:mt-8"
+                            "flex flex-row w-full justify-between gap-2 " +
+                            "mt-5 md:mt-5 lg:mt-8"
                         }
                     >
-                        {sourceIcons.map((icon) => (
-                            <SVG
-                                key={icon}
-                                icon={icon}
+                        {!data.sources.length && (
+                            <div
                                 className={
-                                    "drop-shadow-xl h-8 md:h-10 lg:h-12 lg:p-2 " +
-                                    "rounded-lg cursor-pointer transition-colors " +
-                                    "fill-slate-100 lg:hover:bg-white " +
-                                    "lg:hover:fill-slate-800"
+                                    "flex justify-center items-center w-full p-2 md:p-3 lg:p-2 rounded-lg opacity-70 " +
+                                    "border-2 border-white text-slate-100 font-mono capitalize md:text-xl lg:text-base"
                                 }
-                                whileHover={{ y: 10 }}
-                            />
+                            >
+                                <SVG
+                                    icon="none"
+                                    className={
+                                        "drop-shadow-xl h-6 md:h-8 lg:h-6 " +
+                                        "pe-3 lg:pe-2 fill-slate-100 "
+                                    }
+                                />
+                                No Sources Available
+                            </div>
+                        )}
+                        {data.sources.map((source) => (
+                            <a
+                                href={source.sourceLink}
+                                target="_blank"
+                                className="w-full"
+                            >
+                                <motion.div
+                                    className={
+                                        "flex justify-center items-center p-2 md:p-3 lg:p-2 cursor-pointer rounded-lg " +
+                                        "transition-colors border-2 border-white lg:hover:bg-white lg:hover:text-slate-800 " +
+                                        "text-slate-100 font-mono capitalize md:text-xl lg:text-base group"
+                                    }
+                                    whileHover={{ y: 10 }}
+                                    type="button"
+                                >
+                                    <SVG
+                                        key={source.sourceType}
+                                        icon={source.sourceType}
+                                        className={
+                                            "drop-shadow-xl h-6 md:h-8 lg:h-5 " +
+                                            "pe-3 lg:pe-2 fill-slate-100 " +
+                                            "lg:group-hover:fill-slate-800 " +
+                                            "transition-colors"
+                                        }
+                                    />
+                                    {source.sourceType}
+                                </motion.div>
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -127,20 +163,34 @@ const Modal = ({ handleClose, data }) => {
                     >
                         <div className="relative overflow-hidden h-full">
                             <motion.div
-                                animate={{ x: `-${index * 100}%` }}
+                                animate={{ x: `-${carouselIndex * 100}%` }}
                                 className="flex items-center"
                             >
-                                {images.map((image) => (
-                                    <img
-                                        key={image}
-                                        src={image}
-                                        className={
-                                            "aspect-[3/2] object-cover " +
-                                            "rounded-t-lg lg:rounded-tl-none " +
-                                            "lg:rounded-tr-lg"
-                                        }
-                                    />
-                                ))}
+                                {Array.from(
+                                    Array(data.numPreviewImages),
+                                    (_, i) => {
+                                        console.log(
+                                            Array(data.numPreviewImages)
+                                        );
+                                        console.log(i);
+                                        return (
+                                            <img
+                                                key={`${data.id}-${i + 1}`}
+                                                alt={`${data.title} Preview ${
+                                                    i + 1
+                                                }`}
+                                                src={`/projects/${data.id}/${
+                                                    i + 1
+                                                }.png`}
+                                                className={
+                                                    "aspect-[3/2] object-cover " +
+                                                    "rounded-t-lg lg:rounded-tl-none " +
+                                                    "lg:rounded-tr-lg"
+                                                }
+                                            />
+                                        );
+                                    }
+                                )}
                             </motion.div>
                             <Arrow direction="left" />
                             <Arrow direction="right" />
@@ -157,32 +207,31 @@ const Modal = ({ handleClose, data }) => {
                 <div
                     className={
                         "flex flex-row justify-around font-display text-sm " +
-                        "md:text-lg lg:gap-12"
+                        "md:text-lg lg:gap-12 capitalize"
                     }
                 >
                     <h2 className={"flex items-center gap-3 "}>
-                        <SVG icon={"academic"} className={"inline"} />
-                        Academic
+                        <SVG icon={data.type} className={"inline"} />
+                        {data.type}
                     </h2>
                     <h2 className={"flex items-center gap-3 "}>
                         <SVG icon={"calendar"} className={"inline"} />
-                        October 2023
+                        {data.date}
                     </h2>
                 </div>
                 <div className="h-full flex flex-col items-center">
                     <div className="leading-normal font-sans text-md md:text-lg">
-                        Pocket Garage is an innovative automobile data retrieval
-                        application that provides users with quick and detailed
-                        information about various vehicles.{" "}
-                        <div className="hidden md:inline">
-                            Users can easily access comprehensive vehicle
-                            information, including specifications such as body
-                            classification, fuel type, drivetrain details,
-                            engine specifications, and more. I made this project
-                            as a form of practicing mobile development.{" "}
-                        </div>
-                        I used React Native to achieve cross-platform
-                        compatibility.
+                        {data.description.map((e) => (
+                            <div
+                                className={`${
+                                    !e.showOnMobile
+                                        ? "hidden md:inline"
+                                        : "inline"
+                                }`}
+                            >
+                                {e.content}{" "}
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div
@@ -193,7 +242,7 @@ const Modal = ({ handleClose, data }) => {
                     }
                 >
                     Technologies Used:
-                    {techstack.map((icon) => (
+                    {data.techstack.map((icon) => (
                         <motion.img
                             key={icon}
                             src={`/icons/${icon}.svg`}

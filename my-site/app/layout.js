@@ -1,10 +1,10 @@
 import "./globals.css";
-import { Open_Sans, Roboto_Mono, Poppins } from "next/font/google";
+import { Work_Sans, Roboto_Mono, Poppins } from "next/font/google";
 
-const open_sans = Open_Sans({
+const work_sans = Work_Sans({
     subsets: ["latin"],
     display: "swap",
-    variable: "--font-open-sans",
+    variable: "--font-work-sans",
 });
 
 const roboto_mono = Roboto_Mono({
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${open_sans.className} ${roboto_mono.variable} ${poppins.variable}`}
+                className={`${work_sans.className} ${roboto_mono.variable} ${poppins.variable}`}
             >
                 <script
                     src="https://kit.fontawesome.com/b079da69e8.js"
