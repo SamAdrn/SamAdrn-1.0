@@ -6,6 +6,20 @@ const overlayVariants = {
     hover: { opacity: 1 },
 };
 
+const thumbnailVariant = {
+    enter: {
+        opacity: 0,
+        scale: 1.2,
+    },
+    center: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            type: "spring",
+        },
+    },
+};
+
 function Thumbnail({ isMobile, onClick, id, title, languages }) {
     const controls = useAnimationControls();
     return (
@@ -13,6 +27,7 @@ function Thumbnail({ isMobile, onClick, id, title, languages }) {
             className={
                 "bg-slate-200 h-[20vh] md:h-[15vh] lg:md:h-[20vh] m-4 lg:m-6 rounded-lg shadow-lg relative cursor-pointer"
             }
+            variants={thumbnailVariant}
         >
             <img
                 className="h-full w-full object-cover rounded-lg"

@@ -13,7 +13,7 @@ function Projects({ isMobile }) {
             opacity: 1,
             transition: {
                 delayChildren: 0.7,
-                staggerChildren: 0.3,
+                staggerChildren: 0.2,
             },
         },
     };

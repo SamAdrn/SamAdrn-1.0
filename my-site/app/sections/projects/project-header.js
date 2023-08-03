@@ -16,7 +16,7 @@ function ProjectHeader() {
             <motion.h2
                 className={
                     "text-3xl md:text-4xl font-display font-semibold " +
-                    "text-center mt-3 px-8 "
+                    "text-center mt-3 mx-8 border-b-4 border-slate-600 pb-7"
                 }
                 // variants={subtitleVariant}
             >

@@ -316,8 +316,8 @@ function Gallery({ isMobile }) {
     return (
         <motion.div
             className={
-                "w-screen grid grid-cols-1 px-10 py-20 " +
-                "md:grid-cols-2 lg:grid-cols-3 lg:px-40 lg:py-20"
+                "w-screen grid grid-cols-1 px-5 py-10 " +
+                "md:grid-cols-2 lg:grid-cols-3 lg:px-40"
             }
         >
             {projects.map((_, i) => (
