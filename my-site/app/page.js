@@ -6,6 +6,7 @@ import About from "./sections/about/about";
 import Home from "./sections/home/home";
 import Navbar from "./sections/navbar/navbar";
 import Projects from "./sections/projects/projects";
+import Contact from "./sections/contact/contact";
 
 export default function Page() {
     const isMobile = window.innerWidth < 768;
@@ -26,7 +27,7 @@ export default function Page() {
         <motion.div
             className={
                 "flex min-h-screen flex-col items-center " +
-                "justify-between p-16 "
+                "justify-between p-16 pb-0"
             }
             initial="enter"
             animate="center"
@@ -39,6 +40,8 @@ export default function Page() {
             <About isMobile={isMobile} />
 
             <Projects isMobile={isMobile} />
+
+            <Contact isMobile={isMobile} />
         </motion.div>
     );
 }

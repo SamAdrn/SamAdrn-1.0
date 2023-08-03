@@ -11,7 +11,7 @@ function ProjectHeader() {
                 }
             >
                 That being said, I love working on projects whenever I get the
-                chance to
+                chance to...
             </motion.h4>
             <motion.h2
                 className={
