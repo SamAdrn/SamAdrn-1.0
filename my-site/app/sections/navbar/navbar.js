@@ -5,19 +5,8 @@ import NavBrand from "./nav-brand";
 import BurgerMenu from "./burger-menu";
 import NavItemList from "./nav-item-list";
 
-function Navbar({ isMobile }) {
+function Navbar({ isMobile, isScrollAtTop }) {
     const [mobileNavVisible, setMobileNavVisible] = useState(false);
-    const [isScrollAtTop, setIsScrollAtTop] = useState(false);
-
-    const updateScroll = () => {
-        if (window.scrollY >= 60) {
-            setIsScrollAtTop(true);
-        } else {
-            setIsScrollAtTop(false);
-        }
-    };
-    
-    window.addEventListener("scroll", updateScroll);
 
     return (
         <nav

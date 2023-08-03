@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import ProfileIcon from "./profile-icons";
 import { motion } from "framer-motion";
 
-function ProfilePicture({ isMobile }) {
+function ProfilePicture({ isMobile, isScrollAtTop }) {
     const [anim, setAnim] = useState(false);
 
     useEffect(() => {
@@ -39,7 +39,7 @@ function ProfilePicture({ isMobile }) {
                 className={"rounded-full drop-shadow-xl h-full z-10"}
                 src="/profile.jpg"
                 alt="Picture of the author"
-                onHoverStart={() => setAnim(true)}
+                onHoverStart={() => setAnim(!isScrollAtTop)}
                 onHoverEnd={() => setAnim(false)}
                 initial={{ scale: 1, y: 30 }}
                 animate={{ scale: anim ? 0.7 : 1, y: 0 }}

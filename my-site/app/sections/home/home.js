@@ -6,7 +6,7 @@ import ProfilePicture from "./profile-picture";
 import { motion } from "framer-motion";
 import Button from "@/app/components/button";
 
-function Home({ isMobile }) {
+function Home({ isMobile, isScrollAtTop }) {
     return (
         <motion.div
             className={
@@ -16,7 +16,7 @@ function Home({ isMobile }) {
             }
             
         >
-            <ProfilePicture isMobile={isMobile} />
+            <ProfilePicture isMobile={isMobile} isScrollAtTop={isScrollAtTop} />
             <Title />
             <Button
                 title="View My Resume"

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import About from "./sections/about/about";
 import Home from "./sections/home/home";
@@ -10,6 +10,18 @@ import Contact from "./sections/contact/contact";
 
 export default function Page() {
     const isMobile = window.innerWidth < 768;
+
+    const [isScrollAtTop, setIsScrollAtTop] = useState(false);
+
+    const updateScroll = () => {
+        if (window.scrollY >= 60) {
+            setIsScrollAtTop(true);
+        } else {
+            setIsScrollAtTop(false);
+        }
+    };
+
+    window.addEventListener("scroll", updateScroll);
 
     const rootVariant = {
         enter: {
@@ -33,9 +45,9 @@ export default function Page() {
             animate="center"
             variants={rootVariant}
         >
-            <Navbar isMobile={isMobile} />
+            <Navbar isMobile={isMobile} isScrollAtTop={isScrollAtTop} />
 
-            <Home isMobile={isMobile} />
+            <Home isMobile={isMobile} isScrollAtTop={isScrollAtTop} />
 
             <About isMobile={isMobile} />
 
