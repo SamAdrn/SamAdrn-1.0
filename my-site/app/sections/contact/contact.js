@@ -71,7 +71,7 @@ function Contact({ isMobile }) {
                             >
                                 <motion.div
                                     className={
-                                        "flex justify-center items-center p-2 md:p-3 lg:p-2 cursor-pointer rounded-lg " +
+                                        "flex justify-center items-center p-3 md:p-4 lg:p-3 cursor-pointer rounded-lg " +
                                         "transition-colors border-2 border-white lg:hover:bg-white lg:hover:text-slate-800 " +
                                         "text-slate-100 font-mono md:text-xl lg:text-2xl group"
                                     }

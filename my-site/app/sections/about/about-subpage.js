@@ -66,7 +66,7 @@ function AboutSubpage() {
                     <div className="lg:col-span-4 mt-10 md:mx-10 lg:m-0">
                         <div
                             className={
-                                "flex justify-center px-20 md:px-10 lg:flex-col"
+                                "flex justify-center px-20 md:px-30 lg:px-10 lg:flex-col"
                             }
                         >
                             <img

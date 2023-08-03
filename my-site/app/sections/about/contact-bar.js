@@ -31,7 +31,7 @@ function ContactBar() {
                     key={icon}
                     icon={icon}
                     className={
-                        "drop-shadow-xl h-5 md:h-12 lg:h-9 lg:px-2 cursor-pointer"
+                        "drop-shadow-xl h-5 md:h-10 lg:h-9 lg:px-2 cursor-pointer"
                     }
                     initial={{ opacity: 1 }}
                     animate={{
