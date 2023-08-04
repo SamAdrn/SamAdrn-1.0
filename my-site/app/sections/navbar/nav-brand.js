@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 function NavBrand({ scrollAtTop }) {
     return (
-        <motion.a
-            href="#"
+        <motion.div
             className="flex items-center"
             initial={{ x: 0 }}
             whileHover={{ x: 10 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
             <span
                 className={
@@ -26,7 +26,7 @@ function NavBrand({ scrollAtTop }) {
                 Samuel K<span className="hidden md:inline">osasih</span>
                 <span className="md:hidden">.</span>
             </span>
-        </motion.a>
+        </motion.div>
     );
 }
 

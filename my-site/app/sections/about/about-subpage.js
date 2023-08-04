@@ -80,7 +80,7 @@ function AboutSubpage() {
                             <ContactBar />
                         </div>
                     </div>
-                    <div className="flex p-16 lg:p-0 lg:px-10 lg:col-span-5 items-center">
+                    <div className="flex py-16 px-10 lg:p-0 lg:px-10 lg:col-span-5 items-center">
                         <Description />
                     </div>
                 </div>

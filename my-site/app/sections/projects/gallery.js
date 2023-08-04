@@ -218,7 +218,7 @@ function Gallery({ isMobile }) {
                     content:
                         "Tic Tac Toe in your own terminal. This project was inspired " +
                         "by my previous work, another terminal game called Maze. Since I " +
-                        "really enjoyed coding with Ruby, I decided to tackle on another.",
+                        "really enjoyed coding with Ruby, I decided to tackle on another challenge.",
                     showOnMobile: true,
                 },
                 {
@@ -322,6 +322,7 @@ function Gallery({ isMobile }) {
         >
             {projects.map((_, i) => (
                 <Thumbnail
+                    key={projects[i].id}
                     isMobile={isMobile}
                     onClick={() => {
                         setModalOpen(true);

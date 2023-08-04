@@ -61,6 +61,7 @@ function About() {
             viewport={{ once: true }}
             variants={rootVariant}
         >
+            <div id="about" className="md:-translate-y-20 lg:translate-y-12 h-10 w-10"></div>
             <motion.div
                 className={
                     "w-screen h-fit flex flex-col justify-center " +
@@ -75,6 +76,7 @@ function About() {
                 >
                     {pages.map((e, i) => (
                         <PageButton
+                            key={e}
                             label={e}
                             setActivePage={setPage}
                             activePage={page}

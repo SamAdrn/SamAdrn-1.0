@@ -40,16 +40,19 @@ function NavItemList({ isMobile, mobileNavVisible, scrollAtTop }) {
                             title="About Me"
                             scrollAtTop={scrollAtTop}
                             isMobile={isMobile}
+                            href="about"
                         />
                         <NavItem
                             title="Projects"
                             scrollAtTop={scrollAtTop}
                             isMobile={isMobile}
+                            href="projects"
                         />
                         <NavItem
                             title="Contact"
                             scrollAtTop={scrollAtTop}
                             isMobile={isMobile}
+                            href="contact"
                         />
                     </motion.ul>
                 </motion.div>

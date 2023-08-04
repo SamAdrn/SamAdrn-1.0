@@ -30,6 +30,10 @@ function Contact({ isMobile }) {
             viewport={{ once: true }}
             variants={rootVariant}
         >
+            <div
+                id="contact"
+                className="translate-y-28 h-10 w-10"
+            ></div>
             <motion.div
                 className={
                     "w-screen h-screen mt-20 pt-20 flex flex-col " +
@@ -68,6 +72,7 @@ function Contact({ isMobile }) {
                                 href={b.link}
                                 target="_blank"
                                 className="w-full md:px-12"
+                                key={b.icon}
                             >
                                 <motion.div
                                     className={
@@ -79,7 +84,6 @@ function Contact({ isMobile }) {
                                     type="button"
                                 >
                                     <SVG
-                                        key={b.icon}
                                         icon={b.icon}
                                         className={
                                             "h-6 md:h-8 lg:h-7 " +

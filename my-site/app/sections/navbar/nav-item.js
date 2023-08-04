@@ -1,14 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 function NavItem({ title = "nav item", href = "#", scrollAtTop, isMobile }) {
     const variants = {
         open: { opacity: 1, height: "auto" },
         closed: { opacity: 0, height: 0 },
     };
+
+    const handleClickScroll = () => {
+        const element = document.getElementById(`${href}`);
+        if (element) {
+            element.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    };
     return (
         <motion.li variants={isMobile ? variants : {}}>
-            <motion.a
+            <motion.div
                 href={href}
                 className={
                     "block py-2 pl-3 pr-4 text-black " +
@@ -24,9 +34,11 @@ function NavItem({ title = "nav item", href = "#", scrollAtTop, isMobile }) {
                 // aria-current="page"
                 initial={{ y: 0 }}
                 whileHover={{ y: -5 }}
+                onClick={handleClickScroll}
+                role="button"
             >
                 {title}
-            </motion.a>
+            </motion.div>
         </motion.li>
     );
 }
