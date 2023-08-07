@@ -246,7 +246,7 @@ const Modal = ({ handleClose, data }) => {
                         <motion.img
                             key={icon}
                             src={`/icons/${icon}.svg`}
-                            className={"drop-shadow-xl w-10 cursor-pointer"}
+                            className={"drop-shadow-xl w-10"}
                             whileHover={{ scale: 1.2 }}
                         />
                     ))}

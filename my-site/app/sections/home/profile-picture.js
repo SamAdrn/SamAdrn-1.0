@@ -35,20 +35,32 @@ function ProfilePicture({ isMobile, isScrollAtTop }) {
                 "w-4/6 mb-5 md:h-3/6 md:m-14 flex justify-center items-center"
             }
         >
+            <div className="flex flex-col">
+                {/* <motion.img
+                    className="w-16 h-16"
+                    src={`/icons/html.svg`}
+                />
+                <motion.img
+                    className="w-16 h-16"
+                    src={`/icons/javascript.svg`}
+                />
+                <motion.img
+                    className="w-16 h-16"
+                    src={`/icons/html.svg`}
+                /> */}
+            </div>
             <motion.img
-                className={"rounded-full drop-shadow-xl h-full z-10"}
+                className={"rounded-full drop-shadow-xl md:h-2/3 lg:h-full z-10"}
                 src="/profile.jpg"
                 alt="Picture of the author"
-                onHoverStart={() => setAnim(!isScrollAtTop)}
-                onHoverEnd={() => setAnim(false)}
                 initial={{ scale: 1, y: 30 }}
-                animate={{ scale: anim ? 0.7 : 1, y: 0 }}
+                animate={{ scale: anim ? 0.9 : 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
             />
             {icons.map((e, i) => (
                 <ProfileIcon
                     key={i}
-                    state={anim && !isMobile}
+                    state={!isMobile}
                     icon={e.icon}
                     transX={e.x}
                     transY={e.y}
