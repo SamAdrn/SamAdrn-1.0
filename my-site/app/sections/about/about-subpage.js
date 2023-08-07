@@ -4,6 +4,7 @@ import ContactBar from "./contact-bar";
 import Description from "./description";
 import { simpleIcons } from "@/app/components/constants";
 import SVG from "@/app/components/svg";
+import TechStack from "./tech-stack";
 
 function AboutSubpage() {
     const variants = {
@@ -63,7 +64,7 @@ function AboutSubpage() {
                             A brief description of me
                         </p>
                     </div>
-                    <div className="lg:col-span-4 mt-10 md:mx-10 lg:m-0">
+                    <div className="lg:col-span-4 my-8 mt-10 md:mx-10 lg:m-0">
                         <div
                             className={
                                 "flex justify-center px-20 md:px-30 lg:px-10 lg:flex-col"
@@ -80,8 +81,11 @@ function AboutSubpage() {
                             <ContactBar />
                         </div>
                     </div>
-                    <div className="flex py-16 px-10 lg:p-0 lg:px-10 lg:col-span-5 items-center">
+                    <div className="flex py-8 px-10 lg:p-0 lg:px-10 lg:col-span-5 items-center">
                         <Description />
+                    </div>
+                    <div className="flex py-8 px-10 w-full lg:col-span-12">
+                        <TechStack />
                     </div>
                 </div>
             </motion.div>
