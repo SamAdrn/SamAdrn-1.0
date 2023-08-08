@@ -27,7 +27,6 @@ function TechStack() {
     const TechIcon = ({ icon }) => {
         return (
             <motion.img
-                key={icon}
                 className="h-10 md:h-14 lg:h-12 drop-shadow-lg"
                 whileHover={{
                     scale: 1.1,
@@ -62,7 +61,7 @@ function TechStack() {
                     }
                 >
                     {languages.map((lang) => (
-                        <TechIcon icon={lang} />
+                        <TechIcon icon={lang} key={lang} />
                     ))}
                 </div>
                 <h4
@@ -78,7 +77,7 @@ function TechStack() {
                     }
                 >
                     {libraries.map((lib) => (
-                        <TechIcon icon={lib} />
+                        <TechIcon icon={lib} key={lib} />
                     ))}
                 </div>
                 <h4
@@ -94,7 +93,7 @@ function TechStack() {
                     }
                 >
                     {tools.map((tool) => (
-                        <TechIcon icon={tool} />
+                        <TechIcon icon={tool} key={tool} />
                     ))}
                 </div>
             </div>

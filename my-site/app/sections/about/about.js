@@ -7,9 +7,9 @@ import Subtitle from "./subtitle";
 import AboutSubpage from "./about-subpage";
 import EducationSubpage from "./education-subpage";
 import ExperienceSubpage from "./experience-subpage";
+import { aboutSubpages } from "@/app/components/constants";
 
 function About() {
-    const pages = ["About", "Education", "Experience"];
     const [page, setPage] = useState(0);
 
     const rootVariant = {
@@ -21,20 +21,6 @@ function About() {
             transition: {
                 delayChildren: 0.7,
                 staggerChildren: 0.3,
-            },
-        },
-    };
-
-    const childVariant = {
-        enter: {
-            opacity: 0,
-            scale: 0,
-        },
-        center: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                type: "spring",
             },
         },
     };
@@ -61,7 +47,10 @@ function About() {
             viewport={{ once: true }}
             variants={rootVariant}
         >
-            <div id="about" className="md:-translate-y-20 lg:translate-y-12 h-10 w-10"></div>
+            <div
+                id="about"
+                className="md:-translate-y-20 lg:translate-y-12 h-10 w-10"
+            ></div>
             <motion.div
                 className={
                     "w-screen h-fit flex flex-col justify-center " +
@@ -74,7 +63,7 @@ function About() {
                     className={"m-6 flex flex-row bg-slate-200 rounded-lg px-1"}
                     variants={pageButtonDivVariant}
                 >
-                    {pages.map((e, i) => (
+                    {aboutSubpages.map((e, i) => (
                         <PageButton
                             key={e}
                             label={e}

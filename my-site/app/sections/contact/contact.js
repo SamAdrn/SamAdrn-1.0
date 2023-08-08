@@ -55,7 +55,7 @@ function Contact({ isMobile }) {
                                 "font-bold font-display text-white text-center text-6xl lg:text-7xl  lg:px-9"
                             }
                         >
-                            Let's get in touch
+                            Let&apos;s get in touch
                         </h2>
                         <p className={" font-display text-white text-center"}>
                             Looking for Spring 2024 Software Engineering

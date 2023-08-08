@@ -20,7 +20,7 @@ function ProjectHeader() {
                 }
                 // variants={subtitleVariant}
             >
-                Here are some of the things I've built:
+                Here are some of the things I&apos;ve built:
             </motion.h2>
         </motion.div>
     );

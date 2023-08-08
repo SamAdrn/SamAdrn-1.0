@@ -16,7 +16,7 @@ function Quote() {
                 }
                 // variants={subtitleVariant}
             >
-                Love what you do, and you won't have to work a day in your life
+                Love what you do, and you won&apos;t have to work a day in your life
             </motion.h2>
         </motion.div>
     );

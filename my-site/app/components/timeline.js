@@ -38,7 +38,7 @@ function Timeline({ title, subtitle, icon, data }) {
             <div className="lg:col-span-9 mt-10 mx-7 md:mx-10">
                 <ol className="relative border-l border-slate-200 ms-4 ps-4">
                     {data.map((event, i) => (
-                        <li className="mb-10 ml-6">
+                        <li className="mb-10 ml-6" key={i}>
                             <span
                                 className={
                                     "absolute flex items-center " +
@@ -89,8 +89,10 @@ function Timeline({ title, subtitle, icon, data }) {
                                     "leading-relaxed text-slate-700"
                                 }
                             >
-                                {event.description.map((point) => (
-                                    <li className="mt-2 text-lg">{point}</li>
+                                {event.description.map((point, i) => (
+                                    <li className="mt-2 text-lg" key={i}>
+                                        {point}
+                                    </li>
                                 ))}
                             </ul>
                         </li>

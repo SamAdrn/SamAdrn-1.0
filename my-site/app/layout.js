@@ -33,10 +33,6 @@ export default function RootLayout({ children }) {
             <body
                 className={`${work_sans.className} ${roboto_mono.variable} ${poppins.variable}`}
             >
-                <script
-                    src="https://kit.fontawesome.com/b079da69e8.js"
-                    crossorigin="anonymous"
-                ></script>
                 {children}
             </body>
         </html>

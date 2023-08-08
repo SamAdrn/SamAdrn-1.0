@@ -2,9 +2,9 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ContactBar from "./contact-bar";
 import Description from "./description";
-import { simpleIcons } from "@/app/components/constants";
-import SVG from "@/app/components/svg";
 import TechStack from "./tech-stack";
+import SVG from "@/app/components/svg";
+import Image from "next/image";
 
 function AboutSubpage() {
     const variants = {
@@ -70,18 +70,20 @@ function AboutSubpage() {
                                 "flex justify-center px-20 md:px-30 lg:px-10 lg:flex-col"
                             }
                         >
-                            <img
+                            <Image
                                 className={
                                     "drop-shadow-xl rounded-l-xl md:w-5/6 " +
                                     "lg:w-full lg:rounded-lg"
                                 }
-                                src="profile2.jpg"
+                                src="/profile2.jpg"
                                 alt="Another picture of the author"
+                                width={500}
+                                height={500}
                             />
                             <ContactBar />
                         </div>
                     </div>
-                    <div className="flex py-8 px-10 lg:p-0 lg:px-10 lg:col-span-5 items-center">
+                    <div className="flex py-8 px-10 items-center lg:p-0 lg:px-10 lg:col-span-5">
                         <Description />
                     </div>
                     <div className="flex py-8 px-10 w-full lg:col-span-12">

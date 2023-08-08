@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, useAnimationControls } from "framer-motion";
+import Image from "next/image"
 
 const overlayVariants = {
     rest: { opacity: 0 },
@@ -29,9 +30,12 @@ function Thumbnail({ isMobile, onClick, id, title, languages }) {
             }
             variants={thumbnailVariant}
         >
-            <img
+            <Image
                 className="h-full w-full object-cover rounded-lg"
                 src={`/projects/${id}/thumb.png`}
+                alt={`${title} thumbnail`}
+                width={4000}
+                height={4000}
             />
             <motion.div
                 className={

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import ProfileIcon from "./profile-icons";
 import { motion } from "framer-motion";
 
-function ProfilePicture({ isMobile, isScrollAtTop }) {
+function ProfilePicture({ isMobile }) {
     const [anim, setAnim] = useState(false);
 
     useEffect(() => {
@@ -14,7 +14,7 @@ function ProfilePicture({ isMobile, isScrollAtTop }) {
         };
 
         intro();
-    }, []);
+    }, [isMobile]);
 
     const icons = [
         { icon: "html", x: "-11rem", y: "-13rem" },
@@ -36,7 +36,9 @@ function ProfilePicture({ isMobile, isScrollAtTop }) {
             }
         >
             <motion.img
-                className={"rounded-full drop-shadow-xl md:h-2/3 lg:h-full z-10"}
+                className={
+                    "rounded-full drop-shadow-xl md:h-2/3 lg:h-full z-10"
+                }
                 src="/profile.jpg"
                 alt="Picture of the author"
                 initial={{ scale: 1, y: 30 }}

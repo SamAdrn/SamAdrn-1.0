@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import SVG from "@/app/components/svg";
 import Button from "@/app/components/button";
+import Image from "next/image";
 
 const Modal = ({ handleClose, data }) => {
     const [carouselIndex, setCarouselIndex] = useState(0);
@@ -127,6 +128,7 @@ const Modal = ({ handleClose, data }) => {
                                 href={source.sourceLink}
                                 target="_blank"
                                 className="w-full"
+                                key={source.sourceType}
                             >
                                 <motion.div
                                     className={
@@ -174,7 +176,7 @@ const Modal = ({ handleClose, data }) => {
                                         );
                                         console.log(i);
                                         return (
-                                            <img
+                                            <Image
                                                 key={`${data.id}-${i + 1}`}
                                                 alt={`${data.title} Preview ${
                                                     i + 1
@@ -187,6 +189,8 @@ const Modal = ({ handleClose, data }) => {
                                                     "rounded-t-lg lg:rounded-tl-none " +
                                                     "lg:rounded-tr-lg"
                                                 }
+                                                width={4000}
+                                                height={4000}
                                             />
                                         );
                                     }
@@ -221,8 +225,9 @@ const Modal = ({ handleClose, data }) => {
                 </div>
                 <div className="h-full flex flex-col items-center">
                     <div className="leading-normal font-sans text-md md:text-lg">
-                        {data.description.map((e) => (
+                        {data.description.map((e, i) => (
                             <div
+                                key={i}
                                 className={`${
                                     !e.showOnMobile
                                         ? "hidden md:inline"
