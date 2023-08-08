@@ -33,7 +33,7 @@ function Thumbnail({ isMobile, onClick, id, title, languages }) {
             <Image
                 className="h-full w-full object-cover rounded-lg"
                 src={`/projects/${id}/thumb.png`}
-                alt={`${title} thumbnail`}
+                alt={`${title} preview thumbnail`}
                 width={4000}
                 height={4000}
             />

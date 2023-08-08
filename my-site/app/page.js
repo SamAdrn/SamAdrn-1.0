@@ -1,27 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import About from "./sections/about/about";
 import Home from "./sections/home/home";
 import Navbar from "./sections/navbar/navbar";
 import Projects from "./sections/projects/projects";
 import Contact from "./sections/contact/contact";
+import { useMediaQuery } from "react-responsive";
 
 export default function Page() {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
     const [isScrollAtTop, setIsScrollAtTop] = useState(false);
 
-    const updateScroll = () => {
-        if (window.scrollY >= 60) {
-            setIsScrollAtTop(true);
-        } else {
-            setIsScrollAtTop(false);
-        }
-    };
+    useEffect(() => {
+        const updateScroll = (e) => {
+            if (e.target.documentElement.scrollTop >= 60) {
+                setIsScrollAtTop(true);
+            } else {
+                setIsScrollAtTop(false);
+            }
+        };
 
-    window.addEventListener("scroll", updateScroll);
+        window.addEventListener("scroll", updateScroll);
+
+        return () => window.removeEventListener("scroll", updateScroll);
+    }, [isScrollAtTop]);
 
     const rootVariant = {
         enter: {
@@ -53,7 +58,7 @@ export default function Page() {
 
             <Projects isMobile={isMobile} />
 
-            <Contact isMobile={isMobile} />
+            <Contact />
         </motion.div>
     );
 }

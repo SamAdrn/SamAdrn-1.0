@@ -1,5 +1,6 @@
 import NavItem from "./nav-item";
 import { motion, AnimatePresence } from "framer-motion";
+import { navbarItems } from "@/app/components/constants";
 
 function NavItemList({ isMobile, mobileNavVisible, scrollAtTop }) {
     const variants = {
@@ -36,24 +37,15 @@ function NavItemList({ isMobile, mobileNavVisible, scrollAtTop }) {
                         }
                         variants={isMobile ? variants : {}}
                     >
-                        <NavItem
-                            title="About Me"
-                            scrollAtTop={scrollAtTop}
-                            isMobile={isMobile}
-                            href="about"
-                        />
-                        <NavItem
-                            title="Projects"
-                            scrollAtTop={scrollAtTop}
-                            isMobile={isMobile}
-                            href="projects"
-                        />
-                        <NavItem
-                            title="Contact"
-                            scrollAtTop={scrollAtTop}
-                            isMobile={isMobile}
-                            href="contact"
-                        />
+                        {navbarItems.map((item) => (
+                            <NavItem
+                                key={item.href}
+                                title={item.title}
+                                scrollAtTop={scrollAtTop}
+                                isMobile={isMobile}
+                                href={item.href}
+                            />
+                        ))}
                     </motion.ul>
                 </motion.div>
             )}

@@ -31,7 +31,6 @@ function NavItem({ title = "nav item", href = "#", scrollAtTop, isMobile }) {
                               "md:hover:text-black"
                     }`
                 }
-                // aria-current="page"
                 initial={{ y: 0 }}
                 whileHover={{ y: -5 }}
                 onClick={handleClickScroll}

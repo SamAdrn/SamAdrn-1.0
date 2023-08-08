@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ProfileIcon from "./profile-icons";
 import { motion } from "framer-motion";
+import { hoveringIcons } from "@/app/components/constants";
 
 function ProfilePicture({ isMobile }) {
     const [anim, setAnim] = useState(false);
@@ -15,19 +16,6 @@ function ProfilePicture({ isMobile }) {
 
         intro();
     }, [isMobile]);
-
-    const icons = [
-        { icon: "html", x: "-11rem", y: "-13rem" },
-        { icon: "javascript", x: "-15rem", y: "-7rem" },
-        { icon: "css", x: "-17rem", y: 0 },
-        { icon: "react", x: "-15rem", y: "7rem" },
-        { icon: "nodejs", x: "-12rem", y: "13rem" },
-        { icon: "swift", x: "15rem", y: "-7rem" },
-        { icon: "python", x: "17rem", y: 0 },
-        { icon: "ruby", x: "15rem", y: "7rem" },
-        { icon: "git", x: "12rem", y: "13rem" },
-        { icon: "java", x: "11rem", y: "-13rem" },
-    ];
 
     return (
         <div
@@ -45,7 +33,7 @@ function ProfilePicture({ isMobile }) {
                 animate={{ scale: anim ? 0.9 : 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
             />
-            {icons.map((e, i) => (
+            {hoveringIcons.map((e, i) => (
                 <ProfileIcon
                     key={i}
                     state={!isMobile}

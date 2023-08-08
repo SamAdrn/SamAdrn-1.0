@@ -6,7 +6,7 @@ import PageButton from "./page-button";
 import Subtitle from "./subtitle";
 import AboutSubpage from "./about-subpage";
 import EducationSubpage from "./education-subpage";
-import ExperienceSubpage from "./experience-subpage";
+import ExperienceSubpage from "./experiences-subpage";
 import { aboutSubpages } from "@/app/components/constants";
 
 function About() {

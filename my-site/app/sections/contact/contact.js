@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SVG from "@/app/components/svg";
+import { contactButtons, ctaMessage } from "@/app/components/constants";
 
-function Contact({ isMobile }) {
+function Contact() {
     const rootVariant = {
         enter: {
             opacity: 0,
@@ -16,13 +17,6 @@ function Contact({ isMobile }) {
         },
     };
 
-    const contactButtons = [
-        { icon: "mail", link: "", label: "Say Hello!" },
-        { icon: "file", link: "", label: "View my Resume" },
-        { icon: "linkedin", link: "", label: "Connect with me" },
-        { icon: "github", link: "", label: "Browse my GitHub" },
-    ];
-
     return (
         <motion.div
             initial="enter"
@@ -30,10 +24,7 @@ function Contact({ isMobile }) {
             viewport={{ once: true }}
             variants={rootVariant}
         >
-            <div
-                id="contact"
-                className="translate-y-28 h-10 w-10"
-            ></div>
+            <div id="contact" className="translate-y-28 h-10 w-10"></div>
             <motion.div
                 className={
                     "w-screen h-screen mt-20 pt-20 flex flex-col " +
@@ -57,9 +48,8 @@ function Contact({ isMobile }) {
                         >
                             Let&apos;s get in touch
                         </h2>
-                        <p className={" font-display text-white text-center"}>
-                            Looking for Spring 2024 Software Engineering
-                            internships{" "}
+                        <p className={"font-display text-white text-center"}>
+                            {ctaMessage}
                         </p>
                     </div>
                     <div
@@ -76,9 +66,13 @@ function Contact({ isMobile }) {
                             >
                                 <motion.div
                                     className={
-                                        "flex justify-center items-center p-3 md:p-4 lg:p-3 cursor-pointer rounded-lg " +
-                                        "transition-colors border-2 border-white lg:hover:bg-white lg:hover:text-slate-800 " +
-                                        "text-slate-100 font-mono md:text-xl lg:text-2xl group"
+                                        "flex justify-center items-center " +
+                                        "p-3 md:p-4 lg:p-3 group  " +
+                                        "rounded-lg cursor-pointer " +
+                                        "border-2 border-white  " +
+                                        "lg:hover:bg-white lg:hover:text-slate-800 " +
+                                        "transition-colors text-slate-100 " +
+                                        "font-mono md:text-xl lg:text-2xl "
                                     }
                                     whileHover={{ x: 10 }}
                                     type="button"

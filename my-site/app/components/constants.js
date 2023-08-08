@@ -1,4 +1,540 @@
-export const simpleIcons = {
+/* NAVBAR ITEMS
+ *
+ * /navbar/nav-item-list.jsx
+ *
+ * Sections that can be accessed through the navbar.
+ */
+export const navbarItems = [
+    { title: "About Me", href: "about" },
+    { title: "Projects", href: "projects" },
+    { title: "Contact", href: "contact" },
+];
+
+/* HOVERING ICONS
+ *
+ * /home/profile-picture.jsx
+ *
+ * The icons that hover around the profile picture at the Home section, along
+ * with their tranlated positions.
+ */
+export const hoveringIcons = [
+    { icon: "html", x: "-11rem", y: "-13rem" },
+    { icon: "javascript", x: "-15rem", y: "-7rem" },
+    { icon: "css", x: "-17rem", y: 0 },
+    { icon: "react", x: "-15rem", y: "7rem" },
+    { icon: "nodejs", x: "-12rem", y: "13rem" },
+    { icon: "swift", x: "15rem", y: "-7rem" },
+    { icon: "python", x: "17rem", y: 0 },
+    { icon: "ruby", x: "15rem", y: "7rem" },
+    { icon: "git", x: "12rem", y: "13rem" },
+    { icon: "java", x: "11rem", y: "-13rem" },
+];
+
+/* ABOUT SUPBAGES
+ *
+ * /about/about.jsx
+ *
+ * The subpages that exist in the About section.
+ */
+export const aboutSubpages = ["About", "Education", "Experience"];
+
+/* ABOUT DESCRIPTION
+ *
+ * /about/description.jsx
+ *
+ * Personal description for the About Me subpage.
+ */
+export const aboutDescription =
+    "An enthusiastic Computer Science Student with a a passion for inventing " +
+    "software. Extremely versatile with a variety of technologies and always " +
+    "looking forward to learn something new. Currently a Senior at the " +
+    "University of Maryland, College Park, with an interest in Full stack " +
+    "development. Looking for Software Engineering Internships!";
+
+/* CONTACT BAR ICONS
+ *
+ * /about/contact-bar.jsx
+ *
+ * The icons to be displayed in the contact bar.
+ */
+export const contactBarIcons = ["github", "linkedin", "mail", "spotify"];
+
+/* CONTACT BAR ICONS
+ *
+ * /about/contact-bar.jsx
+ *
+ * Gradient combinations to complement the icons within the contact bar.
+ */
+export const contactBarGradients = {
+    none: "from-orange-300 to-red-300",
+    github: "from-slate-900 to-slate-600",
+    mail: "from-amber-300 to-orange-300",
+    linkedin: "from-blue-300 to-sky-300",
+    spotify: "from-teal-400 to-emerald-400",
+};
+
+/* EDUCATION DATA
+ *
+ * /about/education-subpage.jsx
+ *
+ * Data to be displayed in the Education subpage
+ */
+export const educationData = [
+    {
+        title: "University of Maryland, College Park",
+        timeframe: "August 2021 - May 2024",
+        location: "College Park, MD",
+        description: [
+            "Bachelor's of Science (B.S.) in Computer Science",
+            "Dean's List: Fall 2022, Spring 2023",
+            "Coursework includes: iOS Development, Web Development, Algorithms, Advanced Data Structures",
+        ],
+    },
+    {
+        title: "Edmonds College",
+        timeframe: "September 2019 - June 2021",
+        location: "Lynnwood, WA",
+        description: [
+            "Associate's of Science (A.S.) in Computer Science",
+            "Graduated with Academic Honors (3.8 GPA out of a 4.0 scale)",
+            "Became a member of the Phi Theta Kappa Honor Society",
+            "Achieved a High School Diploma while taking college courses",
+            "Successfully overcame COVID-19",
+        ],
+    },
+    {
+        title: "Mahatma Gading Intercultural School",
+        timeframe: "July 2009 - July 2019",
+        location: "Jakarta, Indonesia",
+        description: [
+            "5 Cambridge IGCSEs (Mathematics [A], Physics [A], English [A], ICT [A], Business [C])",
+            "Ranked Top-5 amongst 60 students within the Class of 2019",
+            "Won the Most Diligent Student Award upon graduation",
+        ],
+    },
+];
+
+/* EXPERIENCES DATA
+ *
+ * /about/experiences-subpage.jsx
+ *
+ * Data to be displayed in the Experiences subpage
+ */
+export const experiencesData = [
+    {
+        title: "Student Lead @ Terrapin Tech UMD",
+        timeframe: "November 2021 - Present",
+        location: "College Park, MD",
+        description: [
+            "Assist members of the University of Maryland community in troubleshooting various software issues",
+            "Collaborated with other technicians to ensure a quick flow of customer service",
+            "Maintained and created hundreds of customer purchase orders made by various university departments.",
+        ],
+    },
+    {
+        title: "Sponsorship Officer @ PERMIAS Seattle",
+        timeframe: "February 2021 - July 2021",
+        location: "Seattle, WA",
+        description: [
+            "Organized community events for Indonesian students across the state of Washington",
+            "Teamed with fellow board members to promote the wonderful cultures of Indonesia",
+            "This is a volunteer position",
+        ],
+    },
+    {
+        title: "Head of Logistics @ Edmonds Indonesian Club",
+        timeframe: "September 2020 - July 2021",
+        location: "Lynnwood, WA",
+        description: [
+            "Control and manage supplies for organizational events that take place within the college for students.",
+            "This is a volunteer position",
+        ],
+    },
+];
+
+/* LANGUAGES TECH STACK
+ *
+ * /about/tech-stack.jsx
+ *
+ * Languages to include in the tech stack.
+ */
+export const languagesTechStack = [
+    "javascript",
+    "ruby",
+    "java",
+    "python",
+    "swift",
+    "html",
+    "ocaml",
+    "ansic",
+];
+
+/* LIBRARIES TECH STACK
+ *
+ * /about/tech-stack.jsx
+ *
+ * Libraries and Frameworks to include in the tech stack.
+ */
+export const librariesTechStack = [
+    "react",
+    "nodejs",
+    "tailwind",
+    "bootstrap",
+    "swiftui",
+    "jquery",
+];
+
+/* TOOLS TECH STACK
+ *
+ * /about/tech-stack.jsx
+ *
+ * Tools to include in the tech stack.
+ */
+export const toolsTechStack = [
+    "git",
+    "firebase",
+    "mongodb",
+    "gcloud",
+    "vsc",
+    "xcode",
+];
+
+/* PROJECTS DATA
+ *
+ * /projects/gallery.jsx
+ *
+ * Data of all the projects to be showcased in the Projects section.
+ */
+export const projectsData = [
+    {
+        id: "pocket-garage",
+        title: "Pocket Garage",
+        hashtags: ["#reactnative", "#mobiledevelopment"],
+        languages: ["React Native", "Firebase"],
+        sources: [
+            {
+                sourceType: "github",
+                sourceLink: "https://github.com/SamAdrn/PocketGarage",
+            },
+        ],
+        type: "personal",
+        date: "July 2023",
+        description: [
+            {
+                content:
+                    "Pocket Garage is an innovative automobile data " +
+                    "retrieval application that provides users with quick " +
+                    "and detailed information about various vehicles.",
+                showOnMobile: true,
+            },
+            {
+                content:
+                    "Users can easily access comprehensive vehicle " +
+                    "information, including specifications such as body " +
+                    "classification, fuel type, drivetrain details, " +
+                    "engine specifications, and more. I made this project " +
+                    "as a form of practicing mobile development.",
+                showOnMobile: false,
+            },
+            {
+                content:
+                    "It is built upon React Native to achieve " +
+                    "cross-platform compatibility.",
+                showOnMobile: true,
+            },
+        ],
+        numPreviewImages: 5,
+        carouselScheme: "light",
+        techstack: ["react", "firebase", "gcloud", "vsc"],
+    },
+    {
+        id: "unity",
+        title: "Unity",
+        hashtags: ["#swift", "#iosdevelopment", "#geolocation"],
+        languages: ["Swift"],
+        sources: [
+            {
+                sourceType: "github",
+                sourceLink: "https://github.com/SamAdrn/Unity",
+            },
+        ],
+        type: "academic",
+        date: "May 2023",
+        description: [
+            {
+                content:
+                    "This app was created as a final project for our IOS  " +
+                    "Development class.",
+                showOnMobile: false,
+            },
+            {
+                content:
+                    "Unity is an app that allows its users to engage more " +
+                    "with their environment. To achieve this, Unity encourages " +
+                    "users to explore their surroundings as it counts their steps " +
+                    "using it as a currency to purchase various icons for the " +
+                    "purpose of collecting them.",
+                showOnMobile: true,
+            },
+            {
+                content:
+                    "I contributed by utilizing SwiftUI's MapKit to develop the map " +
+                    "and created the in-game store using Swift's method of persistence. " +
+                    "This project was a team effort, teaching me the true value " +
+                    "of collaboration.",
+                showOnMobile: false,
+            },
+        ],
+        numPreviewImages: 4,
+        carouselScheme: "dark",
+        techstack: ["swift", "swiftui", "xcode"],
+    },
+    {
+        id: "triples",
+        title: "Triples",
+        hashtags: ["#swift", "#iosdevelopment", "#minigame"],
+        languages: ["Swift"],
+        sources: [],
+        type: "academic",
+        date: "April 2023",
+        description: [
+            {
+                content:
+                    "My first mobile application. This is an introductory project for an " +
+                    "iOS development class. Triples is a spin-off of the tile puzzle game " +
+                    "called Threes The project helped me understand the core principles of " +
+                    "Swift, such as basic syntax, state management, formatting, and animations.",
+                showOnMobile: true,
+            },
+            {
+                content:
+                    "Due to potential risk of academic violation, the " +
+                    "source code will not be publicly shared",
+                showOnMobile: false,
+            },
+        ],
+        numPreviewImages: 4,
+        carouselScheme: "dark",
+        techstack: ["swift", "xcode"],
+    },
+    {
+        id: "testudo-revamped",
+        title: "Testudo Revamped",
+        hashtags: ["#webdevelopment", "#api", "#database"],
+        languages: ["HTML", "Javascript"],
+        sources: [
+            {
+                sourceType: "github",
+                sourceLink: "https://github.com/SamAdrn/Testudo-Revamp",
+            },
+            {
+                sourceType: "web",
+                sourceLink: "https://testudo2-0.onrender.com/",
+            },
+        ],
+        type: "personal",
+        date: "December 2022",
+        description: [
+            {
+                content:
+                    "Revamped Testudo visualizes a newly-designed class schedule " +
+                    "system servicing students of the University of Maryland. Its " +
+                    "mission is to enhance the experiences that students go through " +
+                    "when looking or registering for classes.",
+                showOnMobile: true,
+            },
+            {
+                content:
+                    "It runs on an Express server hosted on Render.com. Pages " +
+                    "were built with HTML and EJS, designed using Bootstrap " +
+                    "mixed with some custom CSS, and powered by Javascript with " +
+                    "support of the jQuery library.",
+                showOnMobile: false,
+            },
+        ],
+        numPreviewImages: 6,
+        carouselScheme: "light",
+        techstack: [
+            "html",
+            "css",
+            "bootstrap",
+            "javascript",
+            "nodejs",
+            "mongodb",
+            "vsc",
+        ],
+    },
+    {
+        id: "simon-game",
+        title: "The Simon Game",
+        hashtags: ["#webdevelopment", "#webgame"],
+        languages: ["HTML", "Javascript"],
+        sources: [
+            {
+                sourceType: "github",
+                sourceLink: "https://github.com/SamAdrn/Simon-Game/",
+            },
+            {
+                sourceType: "web",
+                sourceLink: "https://samadrn.github.io/Simon-Game/",
+            },
+        ],
+        type: "personal",
+        date: "October 2022",
+        description: [
+            {
+                content:
+                    "A recreation of the classic Simon Game. I created this " +
+                    "project with the intention to practice creating CSS designs " +
+                    "and adding Javascript logic to my websites. Try out the game " +
+                    "by clicking on the Web source button. ",
+                showOnMobile: true,
+            },
+        ],
+        numPreviewImages: 3,
+        carouselScheme: "light",
+        techstack: ["html", "css", "javascript", "jquery", "vsc"],
+    },
+    {
+        id: "tic-tac-toe",
+        title: "Tic Tac Toe",
+        hashtags: ["#gamelogic", "#consolegame"],
+        languages: ["Ruby"],
+        sources: [
+            {
+                sourceType: "github",
+                sourceLink: "https://github.com/SamAdrn/TicTacToe",
+            },
+        ],
+        type: "personal",
+        date: "July 2022",
+        description: [
+            {
+                content:
+                    "Tic Tac Toe in your own terminal. This project was inspired " +
+                    "by my previous work, another terminal game called Maze. Since I " +
+                    "really enjoyed coding with Ruby, I decided to tackle on another challenge.",
+                showOnMobile: true,
+            },
+            {
+                content:
+                    "Not only did it help improve my OOP knowledge, it introduced me " +
+                    "to the world of game logic. Particularly, this game utilizes the " +
+                    "Minimax algorithm to create decisions for the CPU. A very " +
+                    "interesting learn overall, as it opened up a whole new perspective " +
+                    "for me.",
+                showOnMobile: false,
+            },
+        ],
+        numPreviewImages: 3,
+        carouselScheme: "light",
+        techstack: ["ruby", "vsc"],
+    },
+    {
+        id: "maze",
+        title: "Maze",
+        hashtags: ["#graphs", "#consolegame"],
+        languages: ["Ruby"],
+        sources: [
+            {
+                sourceType: "github",
+                sourceLink: "https://github.com/SamAdrn/Maze",
+            },
+        ],
+        type: "personal",
+        date: "June 2022",
+        description: [
+            {
+                content:
+                    "Maze started out as a project for one of my classes, but it " +
+                    "was so interesting to me that I had to expand on it over the summer. " +
+                    "Maze was a way for me to comprehend, at a deeper level, the concept " +
+                    "of graphs in the world of programming.",
+                showOnMobile: true,
+            },
+            {
+                content:
+                    "I found out that given an fully condensed adjacency matriz that " +
+                    "represented walls, I could carve out a pathway by traversing through " +
+                    "it. As I tackled upon this challenge, I wanted to present what I learned " +
+                    "in a form of creativity, hence, I created this project.",
+                showOnMobile: false,
+            },
+        ],
+        numPreviewImages: 3,
+        carouselScheme: "light",
+        techstack: ["ruby", "vsc"],
+    },
+    {
+        id: "caraoke",
+        title: "Caraoke",
+        hashtags: ["#hackathon", "#hardware"],
+        languages: ["Arduino", "Python"],
+        sources: [
+            {
+                sourceType: "github",
+                sourceLink: "https://github.com/SamAdrn/Caraoke",
+            },
+            {
+                sourceType: "devpost",
+                sourceLink:
+                    "https://devpost.com/software/caraoke-lyrics-on-the-go?",
+            },
+        ],
+        type: "hackathon",
+        date: "April 2022",
+        description: [
+            {
+                content:
+                    "Caraoke was inspired by the love of carpool karaoke that I " +
+                    "share with my friends. As our inspiration, we developed this  " +
+                    "project for the 2022 Bitcamp Hackathon hosted at the  " +
+                    "University of Maryland.",
+                showOnMobile: true,
+            },
+            {
+                content:
+                    "Sending lyrics to our borrowed hardware is a Python backend " +
+                    "that grabs the currently playing song on your Spotify account " +
+                    "and looks for its lyrics on Textyl.co's API. Being that it was my " +
+                    "first time dealing with hardware, and it was my biggest contribution " +
+                    "my first Hackathon experience allowed me to learn so much in so little time.",
+                showOnMobile: false,
+            },
+        ],
+        numPreviewImages: 2,
+        carouselScheme: "dark",
+        techstack: ["arduino", "python", "c++", "vsc"],
+    },
+];
+
+/* CONTACT BUTTONS
+ *
+ * /contact/contact.jsx
+ *
+ * CTA buttons for the Contact section.
+ */
+export const contactButtons = [
+    { icon: "mail", link: "", label: "Say Hello!" },
+    { icon: "file", link: "", label: "View my Resume" },
+    { icon: "linkedin", link: "", label: "Connect with me" },
+    { icon: "github", link: "", label: "Browse my GitHub" },
+];
+
+/* CTA MESSAGE
+ *
+ * /contact/contact.jsx
+ *
+ * CTA message for the Contact section
+ */
+export const ctaMessage =
+    "Looking for Spring 2024 Software Engineering internships";
+
+/* SVG ICONS
+ *
+ * Inline customizable SVG icons by FontAwesome. Best used with SVG components.
+ */
+export const svgIcons = {
     academic: {
         name: "Academic",
         viewbox: "0 0 576 512",
@@ -8,6 +544,11 @@ export const simpleIcons = {
         name: "Briefcase",
         viewbox: "0 0 512 512",
         path: "M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z",
+    },
+    burgermenu: {
+        name: "Burger Menu",
+        viewbox: "0 0 448 512",
+        path: "M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z",
     },
     calendar: {
         name: "Calendar",

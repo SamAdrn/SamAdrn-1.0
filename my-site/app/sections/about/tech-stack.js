@@ -1,29 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+    languagesTechStack,
+    librariesTechStack,
+    toolsTechStack,
+} from "@/app/components/constants";
 
 function TechStack() {
-    const languages = [
-        "javascript",
-        "ruby",
-        "java",
-        "python",
-        "swift",
-        "html",
-        "ocaml",
-        "ansic",
-    ];
-
-    const libraries = [
-        "react",
-        "nodejs",
-        "tailwind",
-        "bootstrap",
-        "swiftui",
-        "jquery",
-    ];
-
-    const tools = ["git", "firebase", "mongodb", "gcloud", "vsc", "xcode"];
-
     const TechIcon = ({ icon }) => {
         return (
             <motion.img
@@ -60,7 +43,7 @@ function TechStack() {
                         "flex flex-row flex-wrap items-center gap-5 md:gap-7 col-span-8 mb-9 lg:mb-0"
                     }
                 >
-                    {languages.map((lang) => (
+                    {languagesTechStack.map((lang) => (
                         <TechIcon icon={lang} key={lang} />
                     ))}
                 </div>
@@ -76,7 +59,7 @@ function TechStack() {
                         "flex flex-row flex-wrap items-center gap-5 md:gap-7 col-span-8 mb-9 lg:mb-0"
                     }
                 >
-                    {libraries.map((lib) => (
+                    {librariesTechStack.map((lib) => (
                         <TechIcon icon={lib} key={lib} />
                     ))}
                 </div>
@@ -92,7 +75,7 @@ function TechStack() {
                         "flex flex-row flex-wrap items-center gap-5 md:gap-7 col-span-8"
                     }
                 >
-                    {tools.map((tool) => (
+                    {toolsTechStack.map((tool) => (
                         <TechIcon icon={tool} key={tool} />
                     ))}
                 </div>

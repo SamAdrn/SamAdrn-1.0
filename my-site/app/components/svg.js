@@ -1,9 +1,8 @@
 import React from "react";
-import { simpleIcons } from "./constants";
+import { svgIcons } from "./constants";
 import { motion } from "framer-motion";
 
 function SVG({
-    key,
     icon,
     className,
     onClick,
@@ -16,11 +15,10 @@ function SVG({
 }) {
     return (
         <motion.svg
-            key={key}
             className={className}
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
-            viewBox={simpleIcons[icon].viewbox}
+            viewBox={svgIcons[icon].viewbox}
             onClick={onClick}
             initial={initial}
             animate={animate}
@@ -29,7 +27,7 @@ function SVG({
             onHoverStart={onHoverStart}
             onHoverEnd={onHoverEnd}
         >
-            <path d={simpleIcons[icon].path} />
+            <path d={svgIcons[icon].path} />
         </motion.svg>
     );
 }
