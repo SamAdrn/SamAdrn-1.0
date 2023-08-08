@@ -18,7 +18,7 @@ function Gallery({ isMobile }) {
                 "md:grid-cols-2 lg:grid-cols-3 lg:px-40"
             }
         >
-            {projectsData.map((proj) => (
+            {projectsData.map((proj, i) => (
                 <Thumbnail
                     key={proj.id}
                     isMobile={isMobile}

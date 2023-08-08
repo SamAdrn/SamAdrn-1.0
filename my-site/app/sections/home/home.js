@@ -18,7 +18,7 @@ function Home({ isMobile, isScrollAtTop }) {
             <ProfilePicture isMobile={isMobile} isScrollAtTop={isScrollAtTop} />
             <Title />
 
-            <a href={""} target="_blank">
+            <a href={"/Resume.pdf"} target="_blank">
                 <motion.div
                     className={
                         "flex justify-center items-center p-4 lg:p-3 md:px-8 lg:px-10 mt-16 lg:mt-10 cursor-pointer rounded-lg " +

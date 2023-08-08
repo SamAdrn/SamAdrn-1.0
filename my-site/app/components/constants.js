@@ -179,6 +179,7 @@ export const librariesTechStack = [
     "react",
     "nodejs",
     "tailwind",
+    "nextjs",
     "bootstrap",
     "swiftui",
     "jquery",
