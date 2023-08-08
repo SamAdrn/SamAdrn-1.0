@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function NavBrand({ scrollAtTop }) {
     return (
         <motion.div
-            className="flex items-center"
+            className="flex items-center cursor-pointer"
             initial={{ x: 0 }}
             whileHover={{ x: 10 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

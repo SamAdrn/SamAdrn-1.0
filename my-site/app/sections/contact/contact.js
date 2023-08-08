@@ -97,15 +97,26 @@ function Contact() {
                         "w-full pb-7 opacity-60 text-white flex flex-col lg:flex-row justify-center items-center gap-3 lg:gap-10"
                     }
                 >
+                    <a
+                        href="https://github.com/SamAdrn/PersonalWebsite"
+                        target="_blank"
+                    >
+                        <div className="flex flex-row items-center">
+                            <p>Handcrafted using</p>
+                            <SVG
+                                icon="react"
+                                className={"fill-neutral-100 h-6 ps-3"}
+                            />
+                        </div>
+                    </a>
+
                     <div className="flex flex-row items-center">
-                        <p className="">Handcrafted using</p>
-                        <SVG
-                            icon="react"
-                            className={"fill-neutral-100 h-6 ps-3"}
-                        />
-                    </div>
-                    <div className="flex flex-row items-center">
-                        <p>Icons by FontAwesome</p>
+                        <p>
+                            Icons by{" "}
+                            <a href="https://fontawesome.com/" target="_blank">
+                                FontAwesome
+                            </a>
+                        </p>
                         <SVG
                             icon="fontawesome"
                             className={"fill-neutral-100 h-6 ps-3"}

@@ -57,7 +57,18 @@ export const aboutDescription =
  *
  * The icons to be displayed in the contact bar.
  */
-export const contactBarIcons = ["github", "linkedin", "mail", "spotify"];
+export const contactBarIcons = [
+    { icon: "github", link: "https://github.com/SamAdrn" },
+    { icon: "linkedin", link: "https://www.linkedin.com/in/samkosasih/" },
+    {
+        icon: "mail",
+        link: "mailto:samadrianko@gmail.com?subject=Nice%20to%20Meet%20You!&body=Hey%2C%0D%0A%0D%0AI%20found%20you%20on%20your%20website!%0D%0A%0D%0A",
+    },
+    {
+        icon: "spotify",
+        link: "https://open.spotify.com/user/31dzjlx5ll7imlrvwoaappx4kngu?si=adbee37aa3ae4b9e",
+    },
+];
 
 /* CONTACT BAR ICONS
  *
@@ -516,10 +527,22 @@ export const projectsData = [
  * CTA buttons for the Contact section.
  */
 export const contactButtons = [
-    { icon: "mail", link: "", label: "Say Hello!" },
-    { icon: "file", link: "", label: "View my Resume" },
-    { icon: "linkedin", link: "", label: "Connect with me" },
-    { icon: "github", link: "", label: "Browse my GitHub" },
+    {
+        icon: "mail",
+        link: "mailto:samadrianko@gmail.com?subject=Nice%20to%20Meet%20You!&body=Hey%2C%0D%0A%0D%0AI%20found%20you%20on%20your%20website!%0D%0A%0D%0A",
+        label: "Say Hello!",
+    },
+    { icon: "file", link: "/Resume.pdf", label: "View my Resume" },
+    {
+        icon: "linkedin",
+        link: "https://www.linkedin.com/in/samkosasih/",
+        label: "Connect with me",
+    },
+    {
+        icon: "github",
+        link: "https://github.com/SamAdrn",
+        label: "Browse my GitHub",
+    },
 ];
 
 /* CTA MESSAGE
