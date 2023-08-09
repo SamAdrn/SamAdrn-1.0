@@ -33,7 +33,7 @@ function ProfilePicture({ isMobile }) {
                 animate={{ scale: anim ? 0.9 : 1, y: 0 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
             />
-            {hoveringIcons.map((e, i) => (
+            {!isMobile && hoveringIcons.map((e, i) => (
                 <ProfileIcon
                     key={i}
                     state={!isMobile}

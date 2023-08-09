@@ -45,7 +45,7 @@ export const aboutSubpages = ["About", "Education", "Experience"];
  * Personal description for the About Me subpage.
  */
 export const aboutDescription =
-    "An enthusiastic Computer Science Student with a a passion for inventing " +
+    "An enthusiastic Computer Science Student with a passion for inventing " +
     "software. Extremely versatile with a variety of technologies and always " +
     "looking forward to learn something new. Currently a Senior at the " +
     "University of Maryland, College Park, with an interest in Full stack " +

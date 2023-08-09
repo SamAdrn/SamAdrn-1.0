@@ -71,88 +71,113 @@ const Modal = ({ handleClose, data }) => {
                         "lg:rounded-tl-lg lg:w-1/3"
                     }
                 >
-                    <h2
-                        className={
-                            "font-bold font-display text-white " +
-                            "text-3xl md:text-4xl lg:text-5xl " +
-                            "mb-1 md:mb-2 lg:mb-3"
-                        }
-                    >
-                        {data.title}
-                    </h2>
-                    <div
-                        className={
-                            "flex flex-row flex-wrap mb-3 font-mono " +
-                            "text-slate-100 md:text-lg lg:text-md"
-                        }
-                    >
-                        {data.hashtags.join(" ")}
-                    </div>
-                    <h2
-                        className={
-                            "font-mono text-white text-lg mb-3 md:text-2xl " +
-                            "lg:text-xl"
-                        }
-                    >
-                        {data.languages.length === 1 && (
-                            <span>Written in </span>
-                        )}
-                        {data.languages.join(" | ")}
-                    </h2>
-
-                    <div
-                        className={
-                            "flex flex-row w-full justify-between gap-2 " +
-                            "mt-5 md:mt-5 lg:mt-8"
-                        }
-                    >
-                        {!data.sources.length && (
-                            <div
+                    <div className="flex flex-row justify-between">
+                        <div className="flex flex-col">
+                            <h2
                                 className={
-                                    "flex justify-center items-center w-full p-2 md:p-3 lg:p-2 rounded-lg opacity-70 " +
-                                    "border-2 border-white text-slate-100 font-mono capitalize md:text-xl lg:text-base"
+                                    "font-bold font-display text-white " +
+                                    "text-3xl md:text-4xl lg:text-5xl " +
+                                    "mb-1 md:mb-2 lg:mb-3"
                                 }
                             >
-                                <SVG
-                                    icon="none"
-                                    className={
-                                        "drop-shadow-xl h-6 md:h-8 lg:h-6 " +
-                                        "pe-3 lg:pe-2 fill-slate-100 "
-                                    }
-                                />
-                                No Sources Available
-                            </div>
-                        )}
-                        {data.sources.map((source) => (
-                            <a
-                                href={source.sourceLink}
-                                target="_blank"
-                                className="w-full"
-                                key={source.sourceType}
+                                {data.title}
+                            </h2>
+                            <div
+                                className={
+                                    "hidden md:flex flex-row flex-wrap mb-3 font-mono " +
+                                    "text-slate-100 text-lg lg:text-md"
+                                }
                             >
-                                <motion.div
-                                    className={
-                                        "flex justify-center items-center p-2 md:p-3 lg:p-2 cursor-pointer rounded-lg " +
-                                        "transition-colors border-2 border-white lg:hover:bg-white lg:hover:text-slate-800 " +
-                                        "text-slate-100 font-mono capitalize md:text-xl lg:text-base group"
-                                    }
-                                    whileHover={{ y: 10 }}
-                                    type="button"
+                                {data.hashtags.join(" ")}
+                            </div>
+                            <h2
+                                className={
+                                    "font-mono text-white text-lg md:mb-3 md:text-2xl " +
+                                    "lg:text-xl"
+                                }
+                            >
+                                {data.languages.length === 1 && (
+                                    <span>Written in </span>
+                                )}
+                                {data.languages.join(" | ")}
+                            </h2>
+
+                            <div
+                                className={
+                                    "hidden md:flex flex-row w-full justify-between gap-2 " +
+                                    "mt-5 lg:mt-8"
+                                }
+                            >
+                                {!data.sources.length && (
+                                    <div
+                                        className={
+                                            "flex justify-center items-center w-full p-3 lg:p-2 rounded-lg opacity-70 " +
+                                            "border-2 border-white text-slate-100 font-mono capitalize md:text-xl lg:text-base"
+                                        }
+                                    >
+                                        <SVG
+                                            icon="none"
+                                            className={
+                                                "drop-shadow-xl h-8 lg:h-6 " +
+                                                "pe-3 lg:pe-2 fill-slate-100 "
+                                            }
+                                        />
+                                        No Sources Available
+                                    </div>
+                                )}
+                                {data.sources.map((source) => (
+                                    <a
+                                        href={source.sourceLink}
+                                        target="_blank"
+                                        className="w-full"
+                                        key={source.sourceType}
+                                    >
+                                        <motion.div
+                                            className={
+                                                "flex justify-center items-center p-2 md:p-3 lg:p-2 cursor-pointer rounded-lg " +
+                                                "transition-colors border-2 border-white lg:hover:bg-white lg:hover:text-slate-800 " +
+                                                "text-slate-100 font-mono capitalize md:text-xl lg:text-base group"
+                                            }
+                                            whileHover={{ y: 10 }}
+                                            type="button"
+                                        >
+                                            <SVG
+                                                key={source.sourceType}
+                                                icon={source.sourceType}
+                                                className={
+                                                    "drop-shadow-xl h-8 lg:h-5 " +
+                                                    "pe-3 lg:pe-2 fill-slate-100 " +
+                                                    "lg:group-hover:fill-slate-800 " +
+                                                    "transition-colors"
+                                                }
+                                            />
+                                            {source.sourceType}
+                                        </motion.div>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="md:hidden flex flex-col gap-5">
+                            {data.sources.map((source) => (
+                                <a
+                                    href={source.sourceLink}
+                                    target="_blank"
+                                    className="w-full"
+                                    key={source.sourceType}
                                 >
                                     <SVG
                                         key={source.sourceType}
                                         icon={source.sourceType}
                                         className={
-                                            "drop-shadow-xl h-6 md:h-8 lg:h-5 " +
+                                            "drop-shadow-xl h-7 " +
                                             "pe-3 lg:pe-2 fill-slate-100 " +
                                             "lg:group-hover:fill-slate-800 " +
                                             "transition-colors"
                                         }
                                     />
-                                    {source.sourceType}
-                                </motion.div>
-                            </a>
-                        ))}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div
@@ -224,7 +249,7 @@ const Modal = ({ handleClose, data }) => {
                     </h2>
                 </div>
                 <div className="h-full flex flex-col items-center">
-                    <div className="leading-normal font-sans text-md md:text-lg">
+                    <div className="leading-normal font-sans text-sm md:text-lg">
                         {data.description.map((e, i) => (
                             <div
                                 key={i}
