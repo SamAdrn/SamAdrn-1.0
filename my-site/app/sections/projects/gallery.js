@@ -14,7 +14,7 @@ function Gallery({ isMobile }) {
     return (
         <motion.div
             className={
-                "w-screen grid grid-cols-1 px-5 py-10 " +
+                "w-full grid grid-cols-1 px-5 py-10 " +
                 "md:grid-cols-2 lg:grid-cols-3 lg:px-40"
             }
         >
