@@ -42,6 +42,7 @@ function About() {
 
     return (
         <motion.div
+            className="w-full"
             initial="enter"
             whileInView="center"
             viewport={{ once: true }}
@@ -50,7 +51,7 @@ function About() {
             <motion.div
                 id="about"
                 className={
-                    "w-screen h-fit flex flex-col justify-center " +
+                    "w-full h-fit flex flex-col justify-center " +
                     "items-center py-10 lg:py-28 scroll-mt-3"
                 }
             >
@@ -73,7 +74,7 @@ function About() {
 
                 <motion.div
                     className={
-                        "bg-slate-100 w-screen h-fit flex justify-center py-12"
+                        "w-full bg-slate-100 h-fit flex justify-center py-12"
                     }
                 >
                     <MotionConfig

@@ -19,6 +19,7 @@ function Contact() {
 
     return (
         <motion.div
+            className="w-full"
             initial="enter"
             whileInView="center"
             viewport={{ once: true }}
@@ -27,7 +28,7 @@ function Contact() {
             <motion.div
                 id="contact"
                 className={
-                    "w-screen h-screen mt-20 pt-20 flex flex-col scroll-mt-3 " +
+                    "w-full h-screen mt-20 pt-20 flex flex-col scroll-mt-3 " +
                     "bg-gradient-to-t from-red-400 to-amber-500 shadow-lg"
                 }
             >

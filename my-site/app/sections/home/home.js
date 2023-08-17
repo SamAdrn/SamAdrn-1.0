@@ -10,7 +10,7 @@ function Home({ isMobile, isScrollAtTop }) {
     return (
         <motion.div
             className={
-                "w-screen h-screen flex flex-col justify-center items-center " +
+                "w-full h-screen flex flex-col justify-center items-center " +
                 "pb-24 text-center bg-gradient-to-t from-red-400 to-amber-500 " +
                 "shadow-lg"
             }

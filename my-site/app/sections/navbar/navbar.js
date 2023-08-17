@@ -11,7 +11,7 @@ function Navbar({ isMobile, isScrollAtTop }) {
     return (
         <nav
             className={
-                "fixed w-full z-20 top-0 left-0 pb-1 transition-colors " +
+                "w-full sticky z-20 top-0 left-0 pb-1 transition-colors " +
                 `${isScrollAtTop ? "bg-slate-100 shadow-lg" : "bg-amber-500"}`
             }
         >

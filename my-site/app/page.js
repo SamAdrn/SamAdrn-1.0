@@ -44,7 +44,7 @@ export default function Page() {
         <motion.div
             className={
                 "flex min-h-screen flex-col items-center " +
-                "justify-between p-16 pb-0"
+                "justify-between pb-0"
             }
             initial="enter"
             animate="center"

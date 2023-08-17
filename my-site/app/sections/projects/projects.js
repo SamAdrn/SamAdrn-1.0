@@ -20,6 +20,7 @@ function Projects({ isMobile }) {
 
     return (
         <motion.div
+            className="w-full"
             initial="enter"
             whileInView="center"
             viewport={{ once: true }}
@@ -28,7 +29,7 @@ function Projects({ isMobile }) {
             <motion.div
                 id="projects"
                 className={
-                    "w-screen h-fit flex flex-col justify-center items-center scroll-mt-40"
+                    "w-full h-fit flex flex-col justify-center items-center scroll-mt-40"
                 }
             >
                 <Quote />
