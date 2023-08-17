@@ -25,15 +25,15 @@ function Projects({ isMobile }) {
             viewport={{ once: true }}
             variants={rootVariant}
         >
-            <div id="projects" className="-translate-y-20 h-10 w-10"></div>
             <motion.div
+                id="projects"
                 className={
-                    "w-screen h-fit flex flex-col justify-center items-center"
+                    "w-screen h-fit flex flex-col justify-center items-center scroll-mt-40"
                 }
             >
                 <Quote />
                 <ProjectHeader />
-                <Gallery isMobile={isMobile}/>
+                <Gallery isMobile={isMobile} />
             </motion.div>
         </motion.div>
     );

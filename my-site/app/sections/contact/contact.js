@@ -24,10 +24,10 @@ function Contact() {
             viewport={{ once: true }}
             variants={rootVariant}
         >
-            <div id="contact" className="translate-y-28 h-10 w-10"></div>
             <motion.div
+                id="contact"
                 className={
-                    "w-screen h-screen mt-20 pt-20 flex flex-col " +
+                    "w-screen h-screen mt-20 pt-20 flex flex-col scroll-mt-3 " +
                     "bg-gradient-to-t from-red-400 to-amber-500 shadow-lg"
                 }
             >

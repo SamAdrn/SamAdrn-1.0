@@ -140,6 +140,8 @@ export const experiencesData = [
             "Assist members of the University of Maryland community in troubleshooting various software issues",
             "Collaborated with other technicians to ensure a quick flow of customer service",
             "Maintained and created hundreds of customer purchase orders made by various university departments.",
+            "Mentored and guided team members on store procedures, prioritizing their well‑being and safety in a customer‑facing role.",
+            "Led bi‑weekly meetings with a small team to ensure they have improved performance.",
         ],
     },
     {
