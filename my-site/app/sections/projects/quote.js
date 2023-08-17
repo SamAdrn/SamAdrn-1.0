@@ -5,8 +5,8 @@ function Quote() {
     return (
         <motion.div
             className={
-                "bg-gradient-to-t from-amber-500 to-red-400 shadow-lg " +
-                "h-[30vh] w-screen flex justify-center items-center"
+                "w-full bg-gradient-to-t from-amber-500 to-red-400 shadow-lg " +
+                "h-[30vh] flex justify-center items-center"
             }
         >
             <motion.h2
