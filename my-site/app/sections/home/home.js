@@ -5,6 +5,7 @@ import Title from "./title";
 import ProfilePicture from "./profile-picture";
 import { motion } from "framer-motion";
 import SVG from "@/app/components/svg";
+import { resume } from "@/app/components/constants";
 
 function Home({ isMobile, isScrollAtTop }) {
     return (
@@ -18,7 +19,7 @@ function Home({ isMobile, isScrollAtTop }) {
             <ProfilePicture isMobile={isMobile} isScrollAtTop={isScrollAtTop} />
             <Title />
 
-            <a href={"/Resume.pdf"} target="_blank">
+            <a href={resume} target="_blank">
                 <motion.div
                     className={
                         "flex justify-center items-center p-4 lg:p-3 md:px-8 lg:px-10 mt-16 lg:mt-10 cursor-pointer rounded-lg " +

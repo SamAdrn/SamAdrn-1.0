@@ -1,3 +1,9 @@
+/* RESUME
+ *
+ * A String that contains the file name of the resume stored.
+ */
+export const resume = "Samuel_Kosasih_Resume.pdf"
+
 /* NAVBAR ITEMS
  *
  * /navbar/nav-item-list.jsx
@@ -92,7 +98,10 @@ export const contactBarGradients = {
  */
 export const educationData = [
     {
+        current: true,
         title: "University of Maryland, College Park",
+        subtitle: "B.S. Computer Science",
+        link: "https://umd.edu/",
         timeframe: "August 2021 - May 2024",
         location: "College Park, MD",
         description: [
@@ -102,7 +111,10 @@ export const educationData = [
         ],
     },
     {
+        current: false,
         title: "Edmonds College",
+        subtitle: "A.S. Computer Science",
+        link: "https://www.edmonds.edu/",
         timeframe: "September 2019 - June 2021",
         location: "Lynnwood, WA",
         description: [
@@ -114,7 +126,9 @@ export const educationData = [
         ],
     },
     {
+        current: false,
         title: "Mahatma Gading Intercultural School",
+        subtitle: "Middle School & 2 Years of High School ",
         timeframe: "July 2009 - July 2019",
         location: "Jakarta, Indonesia",
         description: [
@@ -133,7 +147,24 @@ export const educationData = [
  */
 export const experiencesData = [
     {
-        title: "Student Lead @ Terrapin Tech UMD",
+        current: true,
+        title: "Indonesia Infrastructure Guarantee Fund (IIGF) Institute",
+        subtitle: "Web Developer Intern",
+        link: "https://ptpii.co.id/en",
+        timeframe: "June 2023 - Present",
+        location: "Jakarta, Indonesia (Remote)",
+        description: [
+            "Designed and developed an executive dashboard to facilitate infrastructure project investments for Indonesian stakeholders within a notable government institution",
+            "Collaborated with the Project Division to comprehend dashboard requirements, showcasing adaptability to project‑specific demands",
+            "Leveraged Next.js and React to craft the dashboard, creating universal components and utilized the App Router for seamless navigation",
+            "Ensured a responsive and mobile‑friendly design, dynamically arranging components for optimal user experience across various screen sizes",
+        ],
+    },
+    {
+        current: true,
+        title: "UMD Division of IT | Terrapin Tech",
+        subtitle: "Student Lead",
+        link: "https://it.umd.edu/",
         timeframe: "November 2021 - Present",
         location: "College Park, MD",
         description: [
@@ -145,7 +176,10 @@ export const experiencesData = [
         ],
     },
     {
-        title: "Sponsorship Officer @ PERMIAS Seattle",
+        current: false,
+        title: "PERMIAS Seattle",
+        subtitle: "Sponsorship Officer",
+        link: "https://www.permiasseattle.org/",
         timeframe: "February 2021 - July 2021",
         location: "Seattle, WA",
         description: [
@@ -155,7 +189,10 @@ export const experiencesData = [
         ],
     },
     {
-        title: "Head of Logistics @ Edmonds Indonesian Club",
+        current: false,
+        title: "Edmonds Indonesian Club",
+        subtitle: "Head of Logistics",
+        link: "https://www.linkedin.com/company/indonesian-student-association-at-edmonds-community-college/",
         timeframe: "September 2020 - July 2021",
         location: "Lynnwood, WA",
         description: [
@@ -534,7 +571,7 @@ export const contactButtons = [
         link: "mailto:samadrianko@gmail.com?subject=Nice%20to%20Meet%20You!&body=Hey%2C%0D%0A%0D%0AI%20found%20you%20on%20your%20website!%0D%0A%0D%0A",
         label: "Say Hello!",
     },
-    { icon: "file", link: "/Resume.pdf", label: "View my Resume" },
+    { icon: "file", link: resume, label: "View my Resume" },
     {
         icon: "linkedin",
         link: "https://www.linkedin.com/in/samkosasih/",

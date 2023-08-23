@@ -45,33 +45,54 @@ function Timeline({ title, subtitle, icon, data }) {
                                     "justify-center w-6 h-6 rounded-md " +
                                     "-left-3 bg-gradient-to-r " +
                                     `${
-                                        i == 0
+                                        event.current
                                             ? "from-red-500 to-amber-500"
                                             : "from-gray-400 to-gray-600"
                                     }`
                                 }
                             ></span>
-                            <h3
+                            <div
                                 className={
-                                    "flex items-center mb-4 text-2xl " +
-                                    "md:text-4xl font-sans font-semibold " +
-                                    "text-slate-900"
+                                    "flex flex-col lg:flex-row lg:items-center mb-4 gap-3 lg:gap-10"
                                 }
                             >
-                                {event.title}
-                                {i == 0 ? (
+                                {event.current ? (
                                     <span
                                         className={
                                             "bg-green-100 text-green-800 " +
                                             "text-sm md:text-lg font-mono " +
-                                            "font-medium mr-2 px-2.5 py-0.5 " +
-                                            "rounded ms-1 md:ms-5"
+                                            "font-medium px-2.5 py-0.5 " +
+                                            "rounded w-fit lg:order-last"
                                         }
                                     >
                                         Current
                                     </span>
                                 ) : null}
-                            </h3>
+                                <h3 className="font-sans text-slate-900 flex flex-col">
+                                    <h3
+                                        className={
+                                            "text-2xl md:text-4xl font-semibold " +
+                                            `${
+                                                event.link &&
+                                                "hover:underline cursor-pointer"
+                                            }`
+                                        }
+                                    >
+                                        <a href={event.link} target="_blank">
+                                            {event.title}
+                                        </a>
+                                    </h3>
+                                    {event.subtitle && (
+                                        <h4
+                                            className={
+                                                "text-xl md:text-3xl font-medium mt-3"
+                                            }
+                                        >
+                                            &mdash; {event.subtitle}
+                                        </h4>
+                                    )}
+                                </h3>
+                            </div>
                             <p className="mb-2 text-sm font-normal text-slate-500">
                                 <time className="my-1">
                                     {event.timeframe}{" "}
