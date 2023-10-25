@@ -2,7 +2,7 @@
  *
  * A String that contains the file name of the resume stored.
  */
-export const resume = "Samuel_Kosasih_Resume.pdf"
+export const resume = "Samuel_Kosasih_Resume.pdf";
 
 /* NAVBAR ITEMS
  *
@@ -148,20 +148,6 @@ export const educationData = [
 export const experiencesData = [
     {
         current: true,
-        title: "Indonesia Infrastructure Guarantee Fund (IIGF) Institute",
-        subtitle: "Web Developer Intern",
-        link: "https://ptpii.co.id/en",
-        timeframe: "June 2023 - Present",
-        location: "Jakarta, Indonesia (Remote)",
-        description: [
-            "Designed and developed an executive dashboard to facilitate infrastructure project investments for Indonesian stakeholders within a notable government institution",
-            "Collaborated with the Project Division to comprehend dashboard requirements, showcasing adaptability to project‑specific demands",
-            "Leveraged Next.js and React to craft the dashboard, creating universal components and utilized the App Router for seamless navigation",
-            "Ensured a responsive and mobile‑friendly design, dynamically arranging components for optimal user experience across various screen sizes",
-        ],
-    },
-    {
-        current: true,
         title: "UMD Division of IT | Terrapin Tech",
         subtitle: "Student Lead",
         link: "https://it.umd.edu/",
@@ -173,6 +159,20 @@ export const experiencesData = [
             "Maintained and created hundreds of customer purchase orders made by various university departments.",
             "Mentored and guided team members on store procedures, prioritizing their well‑being and safety in a customer‑facing role.",
             "Led bi‑weekly meetings with a small team to ensure they have improved performance.",
+        ],
+    },
+    {
+        current: false,
+        title: "Indonesia Infrastructure Guarantee Fund (IIGF) Institute",
+        subtitle: "Web Developer Intern",
+        link: "https://ptpii.co.id/en",
+        timeframe: "June 2023 - August 2023",
+        location: "Jakarta, Indonesia (Remote)",
+        description: [
+            "Designed and developed an executive dashboard to facilitate infrastructure project investments for Indonesian stakeholders within a notable government institution",
+            "Collaborated with the Project Division to comprehend dashboard requirements, showcasing adaptability to project‑specific demands",
+            "Leveraged Next.js and React to craft the dashboard, creating universal components and utilized the App Router for seamless navigation",
+            "Ensured a responsive and mobile‑friendly design, dynamically arranging components for optimal user experience across various screen sizes",
         ],
     },
     {
