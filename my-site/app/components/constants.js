@@ -152,7 +152,7 @@ export const experiencesData = [
     {
         current: true,
         title: "Inovalon",
-        subtitle: "Student Lead",
+        subtitle: "Associate Software Engineer Intern",
         link: "https://www.inovalon.com/",
         timeframe: "June 2024 - Present",
         location: "Bowie, MD",
@@ -254,7 +254,6 @@ export const languagesTechStack = [
     "python",
     "ansic",
     "ruby",
-    "postgresql",
     "html",
     "racket",
 ];
@@ -641,7 +640,7 @@ export const contactButtons = [
  * CTA message for the Contact section
  */
 export const ctaMessage =
-    "Looking for Spring 2024 Software Engineering internships";
+    "Looking for Full-Time Software Engineering Roles";
 
 /* SVG ICONS
  *
