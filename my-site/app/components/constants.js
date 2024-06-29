@@ -25,9 +25,9 @@ export const navbarItems = [
  */
 export const hoveringIcons = [
     { icon: "html", x: "-11rem", y: "-13rem" },
-    { icon: "javascript", x: "-15rem", y: "-7rem" },
+    { icon: "typescript", x: "-15rem", y: "-7rem" },
     { icon: "css", x: "-17rem", y: 0 },
-    { icon: "react", x: "-15rem", y: "7rem" },
+    { icon: "angular", x: "-15rem", y: "7rem" },
     { icon: "nodejs", x: "-12rem", y: "13rem" },
     { icon: "swift", x: "15rem", y: "-7rem" },
     { icon: "python", x: "17rem", y: 0 },
@@ -98,7 +98,7 @@ export const contactBarGradients = {
  */
 export const educationData = [
     {
-        current: true,
+        current: false,
         title: "University of Maryland, College Park",
         subtitle: "B.S. Computer Science",
         link: "https://umd.edu/",
@@ -106,8 +106,10 @@ export const educationData = [
         location: "College Park, MD",
         description: [
             "Bachelor's of Science (B.S.) in Computer Science",
-            "Dean's List: Fall 2022, Spring 2023",
-            "Coursework includes: iOS Development, Web Development, Algorithms, Advanced Data Structures",
+            "Dean's List: Fall 2022, Spring 2023, Fall 2023, Spring 2024",
+            "Coursework includes: Web Development, iOS Development, " +
+                "Database Design, Advanced Data Structures, Algorithms, " +
+                "Computer & Network Security, Compilers",
         ],
     },
     {
@@ -128,11 +130,12 @@ export const educationData = [
     {
         current: false,
         title: "Mahatma Gading Intercultural School",
-        subtitle: "Middle School & 2 Years of High School ",
+        subtitle: "Middle School & 1 Year of High School ",
         timeframe: "July 2009 - July 2019",
         location: "Jakarta, Indonesia",
         description: [
-            "5 Cambridge IGCSEs (Mathematics [A], Physics [A], English [A], ICT [A], Business [C])",
+            "5 Cambridge IGCSEs (Mathematics [A], Physics [A], English [A], " +
+                "ICT [A], Business [C])",
             "Ranked Top-5 amongst 60 students within the Class of 2019",
             "Won the Most Diligent Student Award upon graduation",
         ],
@@ -148,17 +151,41 @@ export const educationData = [
 export const experiencesData = [
     {
         current: true,
+        title: "Inovalon",
+        subtitle: "Student Lead",
+        link: "https://www.inovalon.com/",
+        timeframe: "June 2024 - Present",
+        location: "Bowie, MD",
+        description: [
+            "Developed a JavaScript tool to streamline mapping object " +
+                "metadata properties using Swagger documentation by " +
+                "collecting JSON schemas from various endpoints, processing " +
+                "them, and exporting the data into multiple formats",
+            "Leveraged Angular.js to develop core functionalities of an " +
+                "internal admin tool for managing customer enterprise " +
+                "accounts, including role assignment for customer employees " +
+                "and access provisioning product applications.",
+        ],
+    },
+    {
+        current: false,
         title: "UMD Division of IT | Terrapin Tech",
         subtitle: "Student Lead",
         link: "https://it.umd.edu/",
-        timeframe: "November 2021 - Present",
+        timeframe: "November 2021 - May 2024",
         location: "College Park, MD",
         description: [
-            "Assist members of the University of Maryland community in troubleshooting various software issues",
-            "Collaborated with other technicians to ensure a quick flow of customer service",
-            "Maintained and created hundreds of customer purchase orders made by various university departments.",
-            "Mentored and guided team members on store procedures, prioritizing their well‑being and safety in a customer‑facing role.",
-            "Led bi‑weekly meetings with a small team to ensure they have improved performance.",
+            "Assist members of the University of Maryland community in " +
+                "troubleshooting various software issues",
+            "Collaborated with other technicians to ensure a quick flow of " +
+                "customer service",
+            "Maintained and created hundreds of customer purchase orders " +
+                "made by various university departments.",
+            "Mentored and guided team members on store procedures, " +
+                "prioritizing their well‑being and safety in a " +
+                "customer‑facing role.",
+            "Led bi‑weekly meetings with a small team to ensure they have " +
+                "improved performance.",
         ],
     },
     {
@@ -169,10 +196,18 @@ export const experiencesData = [
         timeframe: "June 2023 - August 2023",
         location: "Jakarta, Indonesia (Remote)",
         description: [
-            "Designed and developed an executive dashboard to facilitate infrastructure project investments for Indonesian stakeholders within a notable government institution",
-            "Collaborated with the Project Division to comprehend dashboard requirements, showcasing adaptability to project‑specific demands",
-            "Leveraged Next.js and React to craft the dashboard, creating universal components and utilized the App Router for seamless navigation",
-            "Ensured a responsive and mobile‑friendly design, dynamically arranging components for optimal user experience across various screen sizes",
+            "Designed and developed an executive dashboard to facilitate " +
+                "infrastructure project investments for Indonesian " +
+                "stakeholders within a notable government institution",
+            "Collaborated with the Project Division to comprehend dashboard " +
+                "requirements, showcasing adaptability to project‑specific " +
+                "demands",
+            "Leveraged Next.js and React to craft the dashboard, creating " +
+                "universal components and utilized the App Router for " +
+                "seamless navigation",
+            "Ensured a responsive and mobile‑friendly design, dynamically " +
+                "arranging components for optimal user experience across " +
+                "various screen sizes",
         ],
     },
     {
@@ -183,8 +218,10 @@ export const experiencesData = [
         timeframe: "February 2021 - July 2021",
         location: "Seattle, WA",
         description: [
-            "Organized community events for Indonesian students across the state of Washington",
-            "Teamed with fellow board members to promote the wonderful cultures of Indonesia",
+            "Organized community events for Indonesian students across the " +
+                "state of Washington",
+            "Teamed with fellow board members to promote the wonderful " +
+                "cultures of Indonesia",
             "This is a volunteer position",
         ],
     },
@@ -196,7 +233,8 @@ export const experiencesData = [
         timeframe: "September 2020 - July 2021",
         location: "Lynnwood, WA",
         description: [
-            "Control and manage supplies for organizational events that take place within the college for students.",
+            "Control and manage supplies for organizational events that take " +
+                "place within the college for students.",
             "This is a volunteer position",
         ],
     },
@@ -209,14 +247,16 @@ export const experiencesData = [
  * Languages to include in the tech stack.
  */
 export const languagesTechStack = [
+    "typescript",
     "javascript",
-    "ruby",
     "java",
-    "python",
     "swift",
-    "html",
-    "ocaml",
+    "python",
     "ansic",
+    "ruby",
+    "postgresql",
+    "html",
+    "racket",
 ];
 
 /* LIBRARIES TECH STACK
@@ -226,13 +266,13 @@ export const languagesTechStack = [
  * Libraries and Frameworks to include in the tech stack.
  */
 export const librariesTechStack = [
+    "angular",
     "react",
     "nodejs",
     "tailwind",
     "nextjs",
     "bootstrap",
     "swiftui",
-    "jquery",
 ];
 
 /* TOOLS TECH STACK
@@ -243,10 +283,12 @@ export const librariesTechStack = [
  */
 export const toolsTechStack = [
     "git",
+    "vsc",
+    "azuredevops",
     "firebase",
     "mongodb",
     "gcloud",
-    "vsc",
+    "docker",
     "xcode",
 ];
 
@@ -322,17 +364,17 @@ export const projectsData = [
                 content:
                     "Unity is an app that allows its users to engage more " +
                     "with their environment. To achieve this, Unity encourages " +
-                    "users to explore their surroundings as it counts their steps " +
-                    "using it as a currency to purchase various icons for the " +
-                    "purpose of collecting them.",
+                    "users to explore their surroundings as it counts their " +
+                    "steps using it as a currency to purchase various icons " +
+                    "for the purpose of collecting them.",
                 showOnMobile: true,
             },
             {
                 content:
-                    "I contributed by utilizing SwiftUI's MapKit to develop the map " +
-                    "and created the in-game store using Swift's method of persistence. " +
-                    "This project was a team effort, teaching me the true value " +
-                    "of collaboration.",
+                    "I contributed by utilizing SwiftUI's MapKit to develop  " +
+                    "the map and created the in-game store using Swift's  " +
+                    "method of persistence.  This project was a team effort, " +
+                    "teaching me the true value of collaboration.",
                 showOnMobile: false,
             },
         ],
@@ -351,10 +393,12 @@ export const projectsData = [
         description: [
             {
                 content:
-                    "My first mobile application. This is an introductory project for an " +
-                    "iOS development class. Triples is a spin-off of the tile puzzle game " +
-                    "called Threes The project helped me understand the core principles of " +
-                    "Swift, such as basic syntax, state management, formatting, and animations.",
+                    "My first mobile application. This is an introductory " +
+                    "project for an iOS development class. Triples is a " +
+                    "spin-off of the tile puzzle game called Threes.  " +
+                    "The project helped me understand the core principles of " +
+                    "Swift, such as basic syntax, state management, " +
+                    "formatting, and animations.",
                 showOnMobile: true,
             },
             {
@@ -388,18 +432,19 @@ export const projectsData = [
         description: [
             {
                 content:
-                    "Revamped Testudo visualizes a newly-designed class schedule " +
-                    "system servicing students of the University of Maryland. Its " +
-                    "mission is to enhance the experiences that students go through " +
-                    "when looking or registering for classes.",
+                    "Revamped Testudo visualizes a newly-designed class " +
+                    "schedule system servicing students of the University " +
+                    "of Maryland. Its mission is to enhance the experiences " +
+                    "that students go through when looking or registering " +
+                    "for classes.",
                 showOnMobile: true,
             },
             {
                 content:
-                    "It runs on an Express server hosted on Render.com. Pages " +
-                    "were built with HTML and EJS, designed using Bootstrap " +
-                    "mixed with some custom CSS, and powered by Javascript with " +
-                    "support of the jQuery library.",
+                    "It runs on an Express server hosted on Render.com. " +
+                    "Pages were built with HTML and EJS, designed using " +
+                    "Bootstrap mixed with some custom CSS, and powered by " +
+                    "Javascript with support of the jQuery library.",
                 showOnMobile: false,
             },
         ],
@@ -436,9 +481,9 @@ export const projectsData = [
             {
                 content:
                     "A recreation of the classic Simon Game. I created this " +
-                    "project with the intention to practice creating CSS designs " +
-                    "and adding Javascript logic to my websites. Try out the game " +
-                    "by clicking on the Web source button. ",
+                    "project with the intention to practice creating CSS " +
+                    "designs and adding Javascript logic to my websites. " +
+                    "Try out the game by clicking on the Web source button. ",
                 showOnMobile: true,
             },
         ],
@@ -462,18 +507,19 @@ export const projectsData = [
         description: [
             {
                 content:
-                    "Tic Tac Toe in your own terminal. This project was inspired " +
-                    "by my previous work, another terminal game called Maze. Since I " +
-                    "really enjoyed coding with Ruby, I decided to tackle on another challenge.",
+                    "Tic Tac Toe in your own terminal. This project was " +
+                    "inspired by my previous work, another terminal game " +
+                    "called Maze.  Since I  really enjoyed coding with Ruby, " +
+                    "I decided to tackle on another challenge.",
                 showOnMobile: true,
             },
             {
                 content:
-                    "Not only did it help improve my OOP knowledge, it introduced me " +
-                    "to the world of game logic. Particularly, this game utilizes the " +
-                    "Minimax algorithm to create decisions for the CPU. A very " +
-                    "interesting learn overall, as it opened up a whole new perspective " +
-                    "for me.",
+                    "Not only did it help improve my OOP knowledge, it " +
+                    "introduced me to the world of game logic. Particularly, " +
+                    "this game utilizes the Minimax algorithm to create " +
+                    "decisions for the CPU. A very interesting learn " +
+                    "overall, as it opened up a whole new perspective for me.",
                 showOnMobile: false,
             },
         ],
@@ -497,18 +543,20 @@ export const projectsData = [
         description: [
             {
                 content:
-                    "Maze started out as a project for one of my classes, but it " +
-                    "was so interesting to me that I had to expand on it over the summer. " +
-                    "Maze was a way for me to comprehend, at a deeper level, the concept " +
-                    "of graphs in the world of programming.",
+                    "Maze started out as a project for one of my classes, " +
+                    "but it was so interesting to me that I had to expand " +
+                    "on it  over the summer. Maze was a way for me to " +
+                    "comprehend,  at a deeper level, the concept of graphs " +
+                    "in the world of programming.",
                 showOnMobile: true,
             },
             {
                 content:
-                    "I found out that given an fully condensed adjacency matriz that " +
-                    "represented walls, I could carve out a pathway by traversing through " +
-                    "it. As I tackled upon this challenge, I wanted to present what I learned " +
-                    "in a form of creativity, hence, I created this project.",
+                    "I found out that given an fully condensed adjacency " +
+                    "matrix that  represented walls, I could carve out a " +
+                    "pathway by traversing through it. As I tackled upon " +
+                    "this challenge, I wanted to present what I learned in a " +
+                    "form of creativity, hence, I created this project.",
                 showOnMobile: false,
             },
         ],
@@ -537,19 +585,21 @@ export const projectsData = [
         description: [
             {
                 content:
-                    "Caraoke was inspired by the love of carpool karaoke that I " +
-                    "share with my friends. As our inspiration, we developed this  " +
-                    "project for the 2022 Bitcamp Hackathon hosted at the  " +
-                    "University of Maryland.",
+                    "Caraoke was inspired by the love of carpool karaoke " +
+                    "that I share with my friends. As our inspiration, " +
+                    "we developed this project for the 2022 Bitcamp " +
+                    "Hackathon hosted at the University of Maryland.",
                 showOnMobile: true,
             },
             {
                 content:
-                    "Sending lyrics to our borrowed hardware is a Python backend " +
-                    "that grabs the currently playing song on your Spotify account " +
-                    "and looks for its lyrics on Textyl.co's API. Being that it was my " +
-                    "first time dealing with hardware, and it was my biggest contribution " +
-                    "my first Hackathon experience allowed me to learn so much in so little time.",
+                    "Sending lyrics to our borrowed hardware is a Python  " +
+                    "backend that grabs the currently playing song on your " +
+                    "Spotify account and looks for its lyrics on Textyl.co's " +
+                    "API. Being that it was my first time dealing with " +
+                    "hardware, and it was my biggest contribution my " +
+                    "first Hackathon experience allowed me to learn so " +
+                    "much in so little time.",
                 showOnMobile: false,
             },
         ],
