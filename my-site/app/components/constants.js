@@ -51,11 +51,12 @@ export const aboutSubpages = ["About", "Education", "Experience"];
  * Personal description for the About Me subpage.
  */
 export const aboutDescription =
-    "An enthusiastic Computer Science Student with a passion for inventing " +
-    "software. Extremely versatile with a variety of technologies and always " +
-    "looking forward to learn something new. Currently a Senior at the " +
-    "University of Maryland, College Park, with an interest in Full stack " +
-    "development. Looking for Software Engineering Internships!";
+    "An enthusiastic Software Engineer with a passion for inventing software. " +
+    "I was born and raised in the bustling city of Jakarta, Indonesia, where I " +
+    "developed a passion for programming. Here, I saw many examples of how software " +
+    "can revolutionize our way of life from the many significant impacts made by " +
+    "technology on my community. It instigated my pursuit of a bachelor's degree in " +
+    "the United States so that, one day, I would be able to make an impact on my own.";
 
 /* CONTACT BAR ICONS
  *
@@ -152,7 +153,7 @@ export const experiencesData = [
     {
         current: true,
         title: "Inovalon",
-        subtitle: "Associate Software Engineer Intern",
+        subtitle: "Associate Software Engineer L2",
         link: "https://www.inovalon.com/",
         timeframe: "June 2024 - Present",
         location: "Bowie, MD",
@@ -165,6 +166,10 @@ export const experiencesData = [
                 "internal admin tool for managing customer enterprise " +
                 "accounts, including role assignment for customer employees " +
                 "and access provisioning product applications.",
+            "Developing a wizard-style form application from scratch using " +
+                "Angular to streamline customer onboarding and product setup " +
+                "for Inovalon’s platform, particularly on the form creation and " +
+                "authentication",
         ],
     },
     {
@@ -639,8 +644,7 @@ export const contactButtons = [
  *
  * CTA message for the Contact section
  */
-export const ctaMessage =
-    "Looking for Full-Time Software Engineering Roles";
+export const ctaMessage = "Looking for Full-Time Software Engineering Roles";
 
 /* SVG ICONS
  *
