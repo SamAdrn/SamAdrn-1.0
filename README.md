@@ -1,4 +1,4 @@
-# PersonalWebsite
+# SamAdrn-1.0
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/66015baf-e8b7-44fa-9d4e-41a21e8683f8/deploy-status)](https://app.netlify.com/sites/samadrn/deploys)
 
